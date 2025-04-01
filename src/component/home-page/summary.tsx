@@ -65,7 +65,7 @@ export const Summary = () => {
           return (
             <div
               key={tech.name}
-              className={`border rounded-lg py-2 flex items-center justify-center gap-2 text-[14px] 
+              className={`border rounded-lg py-2 flex items-center justify-center gap-2 text-[12px] 
               ${
                 isDarkMode ? "border-[#404040] bg-[#262626]" : "border-gray-300"
               }`}
@@ -73,8 +73,8 @@ export const Summary = () => {
               <Image
                 src={imageSrc}
                 alt={`${tech.name} Logo`}
-                width={27}
-                height={27}
+                width={20}
+                height={20}
                 
               />
               {tech.name}
@@ -93,7 +93,7 @@ export const Summary = () => {
             developer who builds clean and interactive UIs, let's connect!
           </p>
 
-          <motion.button className={`border cursor-pointer ${theme === "dark" ? "border-[#404040] bg-[#262626]" : "border-gray-300"} px-5 py-2 mt-3 rounded-2xl`}
+          <motion.button className={`w-full border cursor-pointer ${theme === "dark" ? "border-[#404040] bg-[#262626]" : "border-gray-300"} px-5 py-2 mt-3 rounded-2xl`}
              whileHover={{ scale: 1.1 }}
              transition={{ type: "spring", stiffness: 300 }}
           >
