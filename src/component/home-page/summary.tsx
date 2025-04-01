@@ -54,7 +54,7 @@ export const Summary = () => {
       <hr className="border-b-1 border-dashed border-gray-300 my-10" />
 
       <div className="text-[28px] mb-5">Tools that I have used</div>
-      <div className="grid grid-cols-4 md:grid-cols-6 gap-2 text-center z-10">
+      <div className="grid grid-cols-3 md:grid-cols-6 gap-2 text-center z-10">
         {stack.map((tech) => {
           const isBlackLogo = tech.name === "NextJs" || tech.name === "Express";
           const imageSrc =

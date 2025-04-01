@@ -14,6 +14,18 @@ export const Navbar = () => {
   const [activeTab, setActiveTab] = useState("Home");
   const [isOpen, setIsOpen] =useState(false)
   const { theme } = useThemeStore();
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 640); // 640px adalah breakpoint `sm` di Tailwind
+    };
+
+    handleResize(); // Panggil sekali saat pertama render
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -123,26 +135,31 @@ export const Navbar = () => {
           transition={{ duration: 0.5, ease: "easeInOut" }}
         >
           <motion.div
-            className="w-[100px] overflow-hidden rounded-2xl z-20"
-            initial={{ width: "100px", opacity: 1 }}
-            animate={{ width: hidden ? "0px" : "100px", opacity: hidden ? 0 : 1 }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-          >
+      className="overflow-hidden rounded-xl z-20"
+      initial={{ width: isSmallScreen ? "50px" : "100px", opacity: 1 }}
+      animate={{
+        width: hidden ? "0px" : isSmallScreen ? "50px" : "100px",
+        opacity: hidden ? 0 : 1,
+      }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+    >
             <motion.img
               src="/profilepicture.jpeg"
-              className="object-cover rounded-2xl"
+              className="object-cover rounded-xl"
               initial={{ scale: 1, opacity: 1 }}
               animate={{ scale: hidden ? 0 : 1, opacity: hidden ? 0 : 1 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
             />
           </motion.div>
           <motion.div
-            initial={{ marginLeft: 0 }}
-            animate={{ marginLeft: hidden ? "0px" : "20px" }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-          >
-            <div className="text-[24px] md:text-[32px] font-semibold ">Bagus Arya</div>
-            <p className="text-[#969191]">Full-Stack Developer</p>
+      initial={{ marginLeft: 0 }}
+      animate={{
+        marginLeft: hidden ? "0px" : isSmallScreen ? "7px" : "20px",
+      }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+    >
+            <div className="text-[20px] md:text-[32px] font-semibold ">Bagus Arya</div>
+            <p className= "hidden  md:visible text-[16px] text-[#969191]">Full-Stack Developer</p>
           </motion.div>
         </motion.div>
 
@@ -176,7 +193,7 @@ export const Navbar = () => {
             </button>
           </div>
           </div>
-          <div className="text-[#969191]">- Based in Bali, Indonesia</div>
+          <div className="hidden md:visible text-[#969191]">-Bali, Indonesia</div>
         </div>
       </div>
 
@@ -241,7 +258,7 @@ export const Navbar = () => {
     </motion.div>
   
         <div
-          className=" mt-[170px] md:mt-[190px] px-1 z-0"
+          className=" mt-[120px] md:mt-[190px] px-1 z-0"
           style={{ scrollBehavior: "smooth" }}
         >
           <motion.div

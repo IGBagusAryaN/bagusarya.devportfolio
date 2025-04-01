@@ -11,14 +11,14 @@ const data = [
     id: 1,
     img: "/circle.png",
     title: "Circle App",
-    desc: "Circle App is a modern social media platform that connects people interactively. With a sleek dark-themed UI, users can share posts, follow others,and manage profiles effortlessly. It offers personalized suggestions, seamlessinteractions, and smooth performance",
+    desc: "Circle App is a modern social platform with a sleek dark UI for interactive connections. It offers smooth interactions and personalized suggestions.",
     url: "https://circle-app-socialmedia.vercel.app"
   },
   {
     id: 2,
     img: "/lakoe.png",
     title: "Lakoe",
-    desc: "Lakoe App is a modern e-commerce platform with a minimalist UI, enabling users to browse products, make secure transactions, and manage stores easily. It features personalized recommendations, seamless buyer-seller communication, and a smooth checkout process.",
+    desc: "Lakoe App is a modern e-commerce platform with a minimalist UI for easy and secure shopping. It features personalized recommendations and a smooth checkout.",
     url: "https://www.lakoe.site/"
   },
 ];
