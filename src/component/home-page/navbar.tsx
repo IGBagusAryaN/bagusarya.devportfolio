@@ -159,7 +159,7 @@ export const Navbar = () => {
       transition={{ duration: 0.5, ease: "easeInOut" }}
     >
             <div className="text-[20px] md:text-[32px] font-semibold ">Bagus Arya</div>
-            <p className= "hidden  md:visible text-[16px] text-[#969191]">Full-Stack Developer</p>
+            <p className= "hidden  md:block text-[16px] text-[#969191]">Full-Stack Developer</p>
           </motion.div>
         </motion.div>
 
@@ -193,7 +193,7 @@ export const Navbar = () => {
             </button>
           </div>
           </div>
-          <div className="hidden md:visible text-[#969191]">-Bali, Indonesia</div>
+          <div className="hidden md:block text-[#969191]">-Based in Bali, Indonesia 🇮🇩</div>
         </div>
       </div>
 

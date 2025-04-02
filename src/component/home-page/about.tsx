@@ -71,8 +71,39 @@ export const About = () => {
             </div>
 
             <hr className="border-b-1 border-dashed border-gray-300 mt-3 mb-4" />
+            {/* cek */}
+        
+
+            <div className="block md:hidden">
             <div
               className={`p-2 flex items-center border rounded-2xl ${
+                theme === "dark"
+                  ? "border-[#404040] bg-[#262626]"
+                  : "border-gray-300"
+              }`}
+            >
+              <div className="w-[54px] overflow-hidden p-2 ml-[7px] mr-[7px]">
+                <img
+                  src={"/dumbways.png"}
+                  alt="instiki"
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <p className="text-[14px]">PT Dumbways Indonesia Teknologi</p>
+                <p className="text-[14px] text-[#969191]">
+                  Full-stack Dev • 2024-Present 
+                </p>
+                <p className="text-[14px] text-[#969191]">
+                  South Tangerang, Indonesia 🇮🇩
+                </p>
+              </div>
+            </div>
+            </div>
+            {/* Medium */}
+            <div className="hidden md:block">
+            <div
+              className={`p-2 flex items-center border rounded-2xl   ${
                 theme === "dark"
                   ? "border-[#404040] bg-[#262626]"
                   : "border-gray-300"
@@ -95,6 +126,37 @@ export const About = () => {
                 </p>
               </div>
             </div>
+              </div>
+                      {/* Medium */}
+
+              <div className="block md:hidden">
+            <div
+              className={`p-2 flex items-center border rounded-2xl mt-2 ${
+                theme === "dark"
+                  ? "border-[#404040] bg-[#262626]"
+                  : "border-gray-300"
+              }`}
+            >
+              <div className="w-[80px] overflow-hidden p-1">
+                <img
+                  src={"/instiki.png"}
+                  alt="instiki"
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <p className="text-[14px]">Institut Bisnis dan Teknologi Indonesia (INSTIKI)</p>
+                <p className="text-[14px] text-[#969191]">
+                  Bachelor's degree • Information Technology
+                </p>
+                <p className="text-[14px] text-[#969191]">
+                  2020 - 2024 • Bali, Indonesia 🇮🇩
+                </p>
+              </div>
+            </div>
+            </div>
+
+            <div className="hidden md:block">
             <div
               className={`p-2 flex items-center border rounded-2xl mt-2 ${
                 theme === "dark"
@@ -118,6 +180,7 @@ export const About = () => {
                   2020 - 2024 • Bali, Indonesia 🇮🇩
                 </p>
               </div>
+            </div>
             </div>
           </div>
           <div className="mt-10">
