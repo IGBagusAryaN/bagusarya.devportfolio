@@ -12,7 +12,7 @@ export default function ThemeToggle() {
       <motion.button
         onClick={toggleTheme}
         aria-label="Toggle Dark Mode"
-        className="cursor-pointer hidden md:visible"
+        className="cursor-pointer "
         initial={{ scale: 0.8, rotate: 0 }}
         animate={{ scale: 1, rotate: theme === "dark" ? 180 : 0 }}
         transition={{ duration: 0.3, ease: "easeInOut" }}

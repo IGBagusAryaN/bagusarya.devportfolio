@@ -28,6 +28,10 @@ export const Summary = () => {
   return (
     <div className="w-full">
       <div className="text-[28px]">Hello, i'm Arya🖐️</div>
+      <div className="flex gap-4 text-[#969191] mt-2">
+        <div>• Bali, Indonesia</div>
+        <div>• Full-Stack Developer</div>
+      </div>
       <div className="text-[#969191] mt-3 ">
         <p className="text-justify">
           I'm I Gede Bagus Arya Negara, a Frontend Web Developer passionate
