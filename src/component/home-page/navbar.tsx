@@ -8,6 +8,7 @@ import { Summary } from "./summary";
 import { Portofolio } from "./portofolio";
 import { About } from "./about";
 import { Contact } from "./contact";
+import ThemeToggleMobile from "./toggle-theme-mobile";
 
 export const Navbar = () => {
   const [hidden, setHidden] = useState(false);
@@ -240,19 +241,19 @@ export const Navbar = () => {
                 animate={{ opacity: 1, height: "auto", scale: 1, y: 0 }}
                 exit={{ opacity: 0, height: 0, scale: 0.95, y: -10 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
-                className={`mt-4 border ${
-                  theme === "dark" ? "border-[#404040]" : "border-gray-300"
+                className={`mt-4 border-t ${
+                  theme === "dark" ? "border-t-[#404040]" : "border-t-gray-300"
                 } rounded-md md:hidden overflow-hidden`}
               >
-                <ul className="flex flex-col py-2 px-4">
+                <ul className="flex flex-col py-2 px-4b h-[90vh]">
                   {tabs.map((tab, index) => (
                     <motion.li
                       key={tab.name}
-                      className={`flex items-center rounded-[6px] gap-2 cursor-pointer px-4 py-2 transition  ${
+                      className={`flex items-center rounded-[6px] gap-2 cursor-pointer px-4 py-2  ${
                         theme === "dark"
                           ? "hover:bg-[#303030]"
                           : "hover:bg-gray-200"
-                      }`}
+                      } ${activeTab === tab.name && (theme === "dark" ? "bg-#303030" : "bg-gray-200")}`}
                       onClick={() => {
                         setActiveTab(tab.name);
                         setIsOpen(false);
@@ -268,7 +269,9 @@ export const Navbar = () => {
                     >
                       {tab.icon} {tab.name}
                     </motion.li>
+                      
                   ))}
+                  <ThemeToggleMobile/>
                 </ul>
               </motion.div>
             )}
