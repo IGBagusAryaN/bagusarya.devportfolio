@@ -4,7 +4,7 @@ import animationData from "../../../public/rocket-dark.json";
 const RocketDarkAnimation = () => {
   return (
     <div className=" md:mt-[-140px] md:ml-[-40px] absolute z-[-10]">
-      <Lottie animationData={animationData} className="w-96 h-96" />
+      <Lottie animationData={animationData} className="w-[348px] h-[348px]" />
     </div>
   );
 };

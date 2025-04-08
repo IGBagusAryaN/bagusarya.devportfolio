@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
+import { ScrollFadeIn } from "../scroll-page";
 
 export const Contact = () => {
   return (
     <div>
+      <ScrollFadeIn>
       <div className="text-[28px]">Contact</div>
       <p className="text-[#969191]">
         Feel free to get in touch and let's have a discussion about how we can work together.
@@ -87,6 +89,7 @@ export const Contact = () => {
         GitHub
       </motion.a>
     </div>
+    </ScrollFadeIn>
     </div>
   );
 };

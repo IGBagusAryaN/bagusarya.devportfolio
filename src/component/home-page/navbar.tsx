@@ -12,7 +12,7 @@ import { Contact } from "./contact";
 export const Navbar = () => {
   const [hidden, setHidden] = useState(false);
   const [activeTab, setActiveTab] = useState("Home");
-  const [isOpen, setIsOpen] =useState(false)
+  const [isOpen, setIsOpen] = useState(false);
   const { theme } = useThemeStore();
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
@@ -122,141 +122,191 @@ export const Navbar = () => {
     <div>
       <div className="relative">
         <div className="flex justify-between"></div>
-       <motion.div
-      className={`fixed top-0 w-full z-10 max-w-[920px] left-1/2 transform -translate-x-1/2 pt-7 px-5 md:px-4 lg:px-0
-        ${theme === "dark" ? "bg-[#121212] text-white" : "bg-[#FFFF] text-black"}
-      `}
-    >
-      <div className="flex justify-between mt-3 items-center">
         <motion.div
-          className="flex items-center"
-          initial={{ gap: 12 }}
-          animate={{ gap: hidden ? 0 : 12 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
+          className={`fixed top-0 w-full z-10 max-w-[920px] left-1/2 transform -translate-x-1/2 pt-7 px-5 md:px-4 lg:px-0
+        ${
+          theme === "dark" ? "bg-[#121212] text-white" : "bg-[#FFFF] text-black"
+        }
+      `}
         >
-          <motion.div
-      className="overflow-hidden rounded-xl z-20"
-      initial={{ width: isSmallScreen ? "50px" : "100px", opacity: 1 }}
-      animate={{
-        width: hidden ? "0px" : isSmallScreen ? "50px" : "100px",
-        opacity: hidden ? 0 : 1,
-      }}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
-    >
-            <motion.img
-              src="/profilepicture.jpeg"
-              className="object-cover rounded-xl"
-              initial={{ scale: 1, opacity: 1 }}
-              animate={{ scale: hidden ? 0 : 1, opacity: hidden ? 0 : 1 }}
+          <div className="flex justify-between mt-3 items-center">
+            <motion.div
+              className="flex items-center"
+              initial={{ gap: 12 }}
+              animate={{ gap: hidden ? 0 : 12 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
-            />
-          </motion.div>
-          <motion.div
-      initial={{ marginLeft: 0 }}
-      animate={{
-        marginLeft: hidden ? "0px" : isSmallScreen ? "7px" : "20px",
-      }}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
-    >
-            <div className="text-[20px] md:text-[32px] font-semibold ">Bagus Arya</div>
-            <p className= "hidden  md:block text-[16px] text-[#969191]">Full-Stack Developer</p>
-          </motion.div>
+            >
+              <motion.div
+                className="overflow-hidden rounded-xl z-20"
+                initial={{
+                  width: isSmallScreen ? "50px" : "100px",
+                  opacity: 1,
+                }}
+                animate={{
+                  width: hidden ? "0px" : isSmallScreen ? "50px" : "100px",
+                  opacity: hidden ? 0 : 1,
+                }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+              >
+                <motion.img
+                  src="/profilepicture.jpeg"
+                  className="object-cover rounded-xl"
+                  initial={{ scale: 1, opacity: 1 }}
+                  animate={{ scale: hidden ? 0 : 1, opacity: hidden ? 0 : 1 }}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                />
+              </motion.div>
+              <motion.div
+                initial={{ marginLeft: 0 }}
+                animate={{
+                  marginLeft: hidden ? "0px" : isSmallScreen ? "7px" : "20px",
+                }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+              >
+                <div className="text-[20px] md:text-[32px] font-semibold ">
+                  Bagus Arya
+                </div>
+                <p className="hidden  md:block text-[16px] text-[#969191]">
+                  Full-Stack Developer
+                </p>
+              </motion.div>
+            </motion.div>
+
+            <div className="flex flex-col items-end justify-end mt-2">
+              <div className="flex gap-3 items-center">
+                <ThemeToggle />
+                <div className="md:hidden">
+                  <button
+                    onClick={() => setIsOpen(!isOpen)}
+                    className=" rounded-md focus:outline-none text-[20px] cursor-pointer"
+                  >
+                    <motion.div
+                      initial={{ opacity: 1, scale: 1 }}
+                      animate={{
+                        opacity: isOpen ? 0 : 1,
+                        scale: isOpen ? 0.8 : 1,
+                      }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        className="size-6"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </motion.div>
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{
+                        opacity: isOpen ? 1 : 0,
+                        scale: isOpen ? 1 : 0.8,
+                      }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        className="size-6"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </motion.div>
+                  </button>
+                </div>
+              </div>
+              <div className="hidden md:block text-[#969191]">
+                -Based in Bali, Indonesia 🇮🇩
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile Dropdown Navigation with Animation */}
+          <AnimatePresence>
+            {isOpen && (
+              <motion.div
+                initial={{ opacity: 0, height: 0, scale: 0.95, y: -10 }}
+                animate={{ opacity: 1, height: "auto", scale: 1, y: 0 }}
+                exit={{ opacity: 0, height: 0, scale: 0.95, y: -10 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className={`mt-4 border ${
+                  theme === "dark" ? "border-[#404040]" : "border-gray-300"
+                } rounded-md md:hidden overflow-hidden`}
+              >
+                <ul className="flex flex-col py-2 px-4">
+                  {tabs.map((tab, index) => (
+                    <motion.li
+                      key={tab.name}
+                      className={`flex items-center rounded-[6px] gap-2 cursor-pointer px-4 py-2 transition  ${
+                        theme === "dark"
+                          ? "hover:bg-[#303030]"
+                          : "hover:bg-gray-200"
+                      }`}
+                      onClick={() => {
+                        setActiveTab(tab.name);
+                        setIsOpen(false);
+                      }}
+                      initial={{ opacity: 0, y: -5 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -5 }}
+                      transition={{
+                        duration: 0.3,
+                        delay: index * 0.05,
+                        ease: "easeOut",
+                      }}
+                    >
+                      {tab.icon} {tab.name}
+                    </motion.li>
+                  ))}
+                </ul>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          {/* Desktop Navigation */}
+          <nav
+            className={`border ${
+              theme === "dark" ? "border-[#404040]" : "border-gray-300"
+            } hidden md:block rounded-md mt-4`}
+          >
+            <ul className="flex justify-between py-2  md:px-16 lg:px-24">
+              {tabs.map((tab) => (
+                <li
+                  key={tab.name}
+                  className="relative flex items-center gap-2 cursor-pointer px-4 py-2 transition"
+                  onClick={() => setActiveTab(tab.name)}
+                >
+                  {tab.icon} {tab.name}
+                  {activeTab === tab.name && (
+                    <motion.div
+                      layoutId="underline"
+                      className={`absolute bottom-0 left-0 w-full h-0.5 ${
+                        theme === "dark" ? "bg-white" : "bg-[#404040]"
+                      }`}
+                      transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 20,
+                      }}
+                    />
+                  )}
+                </li>
+              ))}
+            </ul>
+          </nav>
         </motion.div>
 
-        <div className="flex flex-col items-end justify-end mt-2">
-          <div className="flex gap-3 items-center">
-          <ThemeToggle />      
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className=" rounded-md focus:outline-none text-[20px] cursor-pointer"
-            >
-              <motion.div
-                initial={{ opacity: 1, scale: 1 }}
-                animate={{ opacity: isOpen ? 0 : 1, scale: isOpen ? 0.8 : 1 }}
-                transition={{ duration: 0.2 }}
-                className="absolute"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
-                  <path fillRule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clipRule="evenodd" />
-                </svg>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: isOpen ? 1 : 0, scale: isOpen ? 1 : 0.8 }}
-                transition={{ duration: 0.2 }}
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
-                  <path fillRule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clipRule="evenodd" />
-                </svg>
-              </motion.div>
-            </button>
-          </div>
-          </div>
-          <div className="hidden md:block text-[#969191]">-Based in Bali, Indonesia 🇮🇩</div>
-        </div>
-      </div>
-
-      {/* Mobile Dropdown Navigation with Animation */}
-      <AnimatePresence>
-  {isOpen && (
-    <motion.div
-      initial={{ opacity: 0, height: 0, scale: 0.95, y: -10 }}
-      animate={{ opacity: 1, height: "auto", scale: 1, y: 0 }}
-      exit={{ opacity: 0, height: 0, scale: 0.95, y: -10 }}
-      transition={{ duration: 0.3, ease: "easeInOut" }}
-      className={`mt-4 border ${
-        theme === "dark" ? "border-[#404040]" : "border-gray-300"
-      } rounded-md md:hidden overflow-hidden`}
-    >
-      <ul className="flex flex-col py-2 px-4">
-        {tabs.map((tab, index) => (
-          <motion.li
-            key={tab.name}
-            className={`flex items-center rounded-[6px] gap-2 cursor-pointer px-4 py-2 transition  ${theme === "dark" ? "hover:bg-[#303030]" : "hover:bg-gray-200"}` }
-            onClick={() => {
-              setActiveTab(tab.name);
-              setIsOpen(false);
-            }}
-            initial={{ opacity: 0, y: -5 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -5 }}
-            transition={{ duration: 0.3, delay: index * 0.05, ease: "easeOut" }}
-          >
-            {tab.icon} {tab.name}
-          </motion.li>
-        ))}
-      </ul>
-    </motion.div>
-  )}
-</AnimatePresence>
-
-
-      {/* Desktop Navigation */}
-      <nav
-        className={`border ${theme === "dark" ? "border-[#404040]" : "border-gray-300"} hidden md:block rounded-md mt-4`}
-      >
-        <ul className="flex justify-between py-2  md:px-16 lg:px-24">
-          {tabs.map((tab) => (
-            <li
-              key={tab.name}
-              className="relative flex items-center gap-2 cursor-pointer px-4 py-2 transition"
-              onClick={() => setActiveTab(tab.name)}
-            >
-              {tab.icon} {tab.name}
-              {activeTab === tab.name && (
-                <motion.div
-                  layoutId="underline"
-                  className={`absolute bottom-0 left-0 w-full h-0.5 ${theme === "dark" ? "bg-white" : "bg-[#404040]"}`}
-                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                />
-              )}
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </motion.div>
-  
         <div
           className=" mt-[120px] md:mt-[190px] px-1 z-0"
           style={{ scrollBehavior: "smooth" }}

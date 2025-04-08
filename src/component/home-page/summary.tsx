@@ -3,6 +3,8 @@ import { div } from "framer-motion/client";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
+import { useRef } from "react";
+import { ScrollFadeIn } from "../scroll-page";
 
 const RocketAnimation = dynamic(() => import("@/component/animation/rocket-lottie"), { ssr: false });
 const RocketDarkAnimation = dynamic(() => import("@/component/animation/rocket-lottie-dark"), { ssr: false });
@@ -25,13 +27,37 @@ const stack = [
 export const Summary = () => {
   const { theme } = useThemeStore();
   const isDarkMode = theme === "dark";
+
+  const scrollRef = useRef(null);
+
+  // Gandakan array agar efek looping seamless
+  const clonedStack = [...stack, ...stack];
   return (
     <div className="w-full">
-      <div className="text-[28px]">Hello, i'm Arya🖐️</div>
+    
+    <ScrollFadeIn>
+    <div className="text-[28px]">
+      Hello, I'm Arya
+      <motion.span
+        animate={{
+          rotate: [0, 20, -10, 20, 0],
+        }}
+        transition={{
+          duration: 1.5,
+          repeat: Infinity,
+          repeatDelay: 1,
+        }}
+        style={{ display: "inline-block", originY: 0.7 }}
+      >
+        🖐️
+      </motion.span>
+    </div>
+
       <div className="flex gap-4 text-[#969191] mt-2 sm:block md:hidden ">
         <div>• Bali, Indonesia 🇮🇩</div>
         <div>• Full-Stack Developer</div>
       </div>
+
       <div className="text-[#969191] mt-3 ">
         <p className="text-justify">
           I'm I Gede Bagus Arya Negara, a Frontend Web Developer passionate
@@ -54,11 +80,15 @@ export const Summary = () => {
           project I build meets high standards of quality and usability.
         </p>
       </div>
+      {/* Description */}
 
+      </ScrollFadeIn>
       <hr className="border-b-1 border-dashed border-gray-300 my-10" />
 
+      <ScrollFadeIn delay={0.3}>
+      {/* Tools */}
       <div className="text-[28px] mb-5">Tools that I have used</div>
-      <div className="grid grid-cols-3 md:grid-cols-6 gap-2 text-center z-10">
+      <div className="grid grid-cols-2 md:grid-cols-6 gap-2 text-center z-10">
         {stack.map((tech) => {
           const isBlackLogo = tech.name === "NextJs" || tech.name === "Express";
           const imageSrc =
@@ -86,9 +116,15 @@ export const Summary = () => {
           );
         })}
       </div>
-
+      {/* Tools */}
+      </ScrollFadeIn>
+      
       <hr className="border-b-1 border-dashed border-gray-300 my-10" />
 
+      <ScrollFadeIn delay={0.6}>
+
+    
+      {/* Content */}
       <div className="text-[28px] mb-5">What I’ve Been Up To</div>
       <div className="grid md:grid-cols-[2fr_1fr]">
         <div className="">
@@ -97,7 +133,7 @@ export const Summary = () => {
             developer who builds clean and interactive UIs, let's connect!
           </p>
 
-          <motion.button className={`w-full border cursor-pointer ${theme === "dark" ? "border-[#404040] bg-[#262626]" : "border-gray-300"} px-5 py-2 mt-3 rounded-2xl`}
+          <motion.button className={`w-full md:w-[27%] border cursor-pointer ${theme === "dark" ? "border-[#404040] bg-[#262626]" : "border-gray-300"} px-5 py-2 mt-3 rounded-2xl`}
              whileHover={{ scale: 1.1 }}
              transition={{ type: "spring", stiffness: 300 }}
           >
@@ -108,6 +144,8 @@ export const Summary = () => {
           {theme === "dark" ? <RocketDarkAnimation /> : <RocketAnimation />}
         </div>
       </div>
+      {/* Content */}
+      </ScrollFadeIn>
     </div>
   );
 };

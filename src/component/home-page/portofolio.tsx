@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { LiveDemo } from "./livedemo";
 import { useThemeStore } from "@/hooks/store/theme-store";
+import { ScrollFadeIn } from "../scroll-page";
 
 const data = [
   {
@@ -27,6 +28,7 @@ export const Portofolio = () => {
 
   return (
     <div>
+      <ScrollFadeIn>
       <div className="text-[28px]">Portofolio</div>
       <p className="text-[#969191]">
         Several projects that I have worked on, both private and open source.
@@ -37,6 +39,7 @@ export const Portofolio = () => {
           <Card key={item.id} item={item} />
         ))}
       </div>
+      </ScrollFadeIn>
     </div>
   );
 };

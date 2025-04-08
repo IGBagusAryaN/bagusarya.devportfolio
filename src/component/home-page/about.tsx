@@ -2,20 +2,24 @@ import Image from "next/image";
 import { PdfViewer } from "./pdf";
 import { useThemeStore } from "@/hooks/store/theme-store";
 import { motion } from "framer-motion";
+import { ScrollFadeIn } from "../scroll-page";
 
 export const About = () => {
   const { theme } = useThemeStore();
   return (
     <div>
+      <ScrollFadeIn>
       <div className="text-[28px]">About me</div>
       <p className="text-[#969191]">
         An insightful glimpse into who I am - because every detail adds depth to
         the canvas of life.
       </p>
+   
 
       <hr className="border-b-1 border-dashed border-gray-300 mt-3 mb-10" />
-
+      </ScrollFadeIn>
       <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-10">
+      <ScrollFadeIn>
         <div >
           <motion.a
             href="pdf/CV.pdf"
@@ -49,6 +53,8 @@ export const About = () => {
           </motion.a>
           <PdfViewer />
         </div>
+        </ScrollFadeIn>
+        <ScrollFadeIn delay={0.3} >
         <div className="mb-10">
           <div>
             <div className="flex items-center gap-2 mb-4">
@@ -231,6 +237,7 @@ export const About = () => {
             </div>
           </div>
         </div>
+        </ScrollFadeIn>
       </div>
     </div>
   );
