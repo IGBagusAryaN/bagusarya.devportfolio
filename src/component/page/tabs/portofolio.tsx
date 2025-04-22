@@ -3,9 +3,9 @@
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
-import { LiveDemo } from "./livedemo";
+import { LiveDemo } from "../../attr/livedemo";
 import { useThemeStore } from "@/hooks/store/theme-store";
-import { ScrollFadeIn } from "../scroll-page";
+import { ScrollFadeIn } from "../../scroll-page";
 
 const data = [
   {
@@ -21,6 +21,13 @@ const data = [
     title: "Lakoe",
     desc: "Lakoe App is a modern e-commerce platform with a minimalist UI for easy and secure shopping. It features personalized recommendations and a smooth checkout.",
     url: "https://www.lakoe.site/"
+  },
+  {
+    id: 3,
+    img: "/travel.png",
+    title: "TravelHunt",
+    desc: "",
+    url: ""
   },
 ];
 

@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { PdfViewer } from "./pdf";
+import { PdfViewer } from "../../attr/pdf";
 import { useThemeStore } from "@/hooks/store/theme-store";
 import { motion } from "framer-motion";
-import { ScrollFadeIn } from "../scroll-page";
+import { ScrollFadeIn } from "../../scroll-page";
 
 export const About = () => {
   const { theme } = useThemeStore();

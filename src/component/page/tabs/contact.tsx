@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ScrollFadeIn } from "../scroll-page";
+import { ScrollFadeIn } from "../../scroll-page";
 
 export const Contact = () => {
   return (

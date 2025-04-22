@@ -1,18 +1,20 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import ThemeToggle from "./toggle-theme";
+import ThemeToggle from "../../attr/toggle-theme";
 import { useThemeStore } from "@/hooks/store/theme-store";
-import { Summary } from "./summary";
-import { Portofolio } from "./portofolio";
-import { About } from "./about";
-import { Contact } from "./contact";
-import ThemeToggleMobile from "./toggle-theme-mobile";
+import { Summary } from "../tabs/summary";
+import { Portofolio } from "../tabs/portofolio";
+import { About } from "../tabs/about";
+import { Contact } from "../tabs/contact";
+import ThemeToggleMobile from "../../attr/toggle-theme-mobile";
+import { Tab, useTabStore } from "@/hooks/store/tabs-store";
 
 export const Navbar = () => {
   const [hidden, setHidden] = useState(false);
-  const [activeTab, setActiveTab] = useState("Home");
+  // const [activeTab, setActiveTab] = useState("Home");
+  const{activeTab, setActiveTab} = useTabStore()
   const [isOpen, setIsOpen] = useState(false);
   const { theme } = useThemeStore();
   const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -37,7 +39,7 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const tabs = [
+  const tabs : { name: Tab; icon: ReactNode }[] = [
     {
       name: "Home",
       icon: (
@@ -108,6 +110,7 @@ export const Navbar = () => {
       ),
     },
   ];
+  
   const [isFirstLoad, setIsFirstLoad] = useState(true);
 
   useEffect(() => {
@@ -243,7 +246,7 @@ export const Navbar = () => {
                 transition={{ duration: 0.3, ease: "easeInOut" }}
                 className={`mt-4 border-t ${
                   theme === "dark" ? "border-t-[#404040]" : "border-t-gray-300"
-                } rounded-md md:hidden overflow-hidden`}
+                }  md:hidden overflow-hidden`}
               >
                 <ul className="flex flex-col py-2 px-4b h-[90vh]">
                   {tabs.map((tab, index) => (

@@ -4,7 +4,8 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import { ScrollFadeIn } from "../scroll-page";
+import { ScrollFadeIn } from "../../scroll-page";
+import { useTabStore } from "@/hooks/store/tabs-store";
 
 const RocketAnimation = dynamic(() => import("@/component/animation/rocket-lottie"), { ssr: false });
 const RocketDarkAnimation = dynamic(() => import("@/component/animation/rocket-lottie-dark"), { ssr: false });
@@ -27,6 +28,7 @@ const stack = [
 export const Summary = () => {
   const { theme } = useThemeStore();
   const isDarkMode = theme === "dark";
+  const setActiveTab = useTabStore((state) => state.setActiveTab);
 
   const scrollRef = useRef(null);
 
@@ -136,6 +138,11 @@ export const Summary = () => {
           <motion.button className={`w-full md:w-[27%] border cursor-pointer ${theme === "dark" ? "border-[#404040] bg-[#262626]" : "border-gray-300"} px-5 py-2 mt-3 rounded-2xl`}
              whileHover={{ scale: 1.1 }}
              transition={{ type: "spring", stiffness: 300 }}
+             onClick={() => {
+              console.log("Set ke Contact");
+              setActiveTab("Contact");
+            }}
+            
           >
             Contact me
           </motion.button>
