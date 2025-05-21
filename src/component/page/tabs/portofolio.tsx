@@ -22,13 +22,13 @@ const data = [
     desc: "Lakoe App is a modern e-commerce platform with a minimalist UI for easy and secure shopping. It features personalized recommendations and a smooth checkout.",
     url: "https://www.lakoe.site/"
   },
-  {
-    id: 3,
-    img: "/travel.png",
-    title: "TravelHunt",
-    desc: "",
-    url: ""
-  },
+  // {
+  //   id: 3,
+  //   img: "/travel.png",
+  //   title: "TravelHunt",
+  //   desc: "",
+  //   url: ""
+  // },
 ];
 
 export const Portofolio = () => {
