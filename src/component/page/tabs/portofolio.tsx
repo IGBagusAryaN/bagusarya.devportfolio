@@ -22,13 +22,13 @@ const data = [
     desc: "Lakoe App is a modern e-commerce platform with a minimalist UI for easy and secure shopping. It features personalized recommendations and a smooth checkout.",
     url: "https://www.lakoe.site/"
   },
-  // {
-  //   id: 3,
-  //   img: "/travel.png",
-  //   title: "TravelHunt",
-  //   desc: "",
-  //   url: ""
-  // },
+  {
+    id: 3,
+    img: "/travel.png",
+    title: "TravelHunt",
+    desc: "TravelHunt is a web-based decision support app that helps users choose the best travel destination in Indonesia by presenting city options with descriptions and visuals, making the decision process easier and more informed.",
+    url: "https://travel-hunt-alpha.vercel.app/"
+  },
 ];
 
 export const Portofolio = () => {
