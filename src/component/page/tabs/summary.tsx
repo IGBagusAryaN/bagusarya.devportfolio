@@ -21,7 +21,7 @@ const stack = [
   { image: "postgre.png", name: "Postgre" },
   { image: "chakra.png", name: "ChakraUI" },
   { image: "prisma.png", name: "PrismaORM" },
-  { image: "PHP.png", name: "PHP" },
+  { image: "Laravel.png", name: "Laravel" },
   { image: "tailwind.png", name: "Tailwind" },
 ];
 
