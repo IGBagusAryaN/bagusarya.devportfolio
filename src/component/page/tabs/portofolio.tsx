@@ -38,9 +38,9 @@ const data = [
   },
   {
     id: 3,
-    img: "/travel.png",
+    img: "/travelhunt.png",
     title: "TravelHunt",
-    desc: "TravelHunt is a web-based decision support app that helps users choose the best travel destination in Indonesia by presenting city options with descriptions and visuals, making the decision process easier and more informed.",
+    desc: "TravelHunt is a web app that helps users choose the best travel destination in Indonesia by showing city options with descriptions and visuals, making the decision process easier and more informed.",
     url: "https://travel-hunt-alpha.vercel.app/",
     techs: [
       "/React.svg",
@@ -119,12 +119,12 @@ const Card = ({
               <h3 className="text-2xl font-semibold">{item.title}</h3>
               <LiveDemo url={item.url} />
             </div>
-            <p className="text-sm mt-3">{item.desc}</p>
+            <p className="text-sm my-3">{item.desc}</p>
             <div className="flex items-end h-full">
               {/* <p>Tech Stack : </p> */}
               <div className="flex gap-1 mb-10 md:mb-0">
                 {item.techs.map((src, idx) => (
-                  <Image key={idx} src={src} alt="" width={28} height={28} />
+                  <Image key={idx} src={src} alt="" width={28} height={28} className="" />
                 ))}
               </div>
             </div>
