@@ -40,7 +40,7 @@ const data = [
     id: 3,
     img: "/travelhunt.png",
     title: "TravelHunt",
-    desc: "TravelHunt is a web app that helps users choose the best travel destination in Indonesia by showing city options with descriptions and visuals, making the decision process easier and more informed.",
+    desc: "TravelHunt is a web app that helps users easily choose the best travel destination in Indonesia through informative visuals and descriptions.",
     url: "https://travel-hunt-alpha.vercel.app/",
     techs: [
       "/React.svg",
