@@ -54,7 +54,7 @@ const data = [
     id: 4,
     img: "/writeon.png",
     title: "WriteOn",
-    desc: "Write On is a simple web application for writing and managing short stories. With a clean and minimal interface, users can easily create, edit, read, and delete stories. Built using Laravel and Laravel Breeze, this app is designed as a lightweight yet functional CRUD mini project.",
+    desc: "Write On is a simple web app for creating and managing short stories. Built with Laravel and Breeze, it offers a clean UI and essential CRUD features in a lightweight project.",
     url: "https://write-onn.vercel.app/",
     techs: [
       "/Laravel.png",
@@ -122,7 +122,7 @@ const Card = ({
             <p className="text-sm mt-3">{item.desc}</p>
             <div className="flex items-end h-full">
               {/* <p>Tech Stack : </p> */}
-              <div className="flex gap-1">
+              <div className="flex gap-1 mb-10 md:mb-0">
                 {item.techs.map((src, idx) => (
                   <Image key={idx} src={src} alt="" width={28} height={28} />
                 ))}
