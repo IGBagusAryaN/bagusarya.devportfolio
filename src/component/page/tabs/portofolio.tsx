@@ -50,6 +50,19 @@ const data = [
       "/postgre.png",
     ],
   },
+  {
+    id: 4,
+    img: "/writeon.png",
+    title: "WriteOn",
+    desc: "Write On is a simple web application for writing and managing short stories. With a clean and minimal interface, users can easily create, edit, read, and delete stories. Built using Laravel and Laravel Breeze, this app is designed as a lightweight yet functional CRUD mini project.",
+    url: "https://write-onn.vercel.app/",
+    techs: [
+      "/Laravel.png",
+      "/tailwind.png",
+      "/mysql.png"
+
+    ],
+  },
 ];
 
 export const Portofolio = () => {
