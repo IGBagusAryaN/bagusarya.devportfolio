@@ -8,6 +8,33 @@ import { useThemeStore } from "@/hooks/store/theme-store";
 import { ScrollFadeIn } from "../../scroll-page";
 
 const data = [
+    {
+    id: 2,
+    img: "/travelhunt.png",
+    title: "TravelHunt",
+    desc: "TravelHunt is a web app that helps users easily choose the best travel destination in Indonesia through informative visuals and descriptions.",
+    url: "https://travel-hunt-alpha.vercel.app/",
+    techs: [
+      "/React.svg",
+      "/express-light.svg",
+      "/prisma.png",
+      "/ts.png",
+      "/postgre.png",
+    ],
+  },
+  {
+    id: 1,
+    img: "/writeon.png",
+    title: "WriteOn",
+    desc: "Write On is a simple web app for creating and managing short stories. Built with Laravel and Breeze, it offers a clean UI and essential CRUD features in a lightweight project.",
+    url: "https://write-onn.vercel.app/",
+    techs: [
+      "/Laravel.png",
+      "/tailwind.png",
+      "/mysql.png"
+      ,"/Livewire.png"
+    ],
+  },
   {
     id: 4,
     img: "/circle.png",
@@ -36,33 +63,7 @@ const data = [
       "/ts.png",
       "/postgre.png",],
   },
-  {
-    id: 2,
-    img: "/travelhunt.png",
-    title: "TravelHunt",
-    desc: "TravelHunt is a web app that helps users easily choose the best travel destination in Indonesia through informative visuals and descriptions.",
-    url: "https://travel-hunt-alpha.vercel.app/",
-    techs: [
-      "/React.svg",
-      "/express-light.svg",
-      "/prisma.png",
-      "/ts.png",
-      "/postgre.png",
-    ],
-  },
-  {
-    id: 1,
-    img: "/writeon.png",
-    title: "WriteOn",
-    desc: "Write On is a simple web app for creating and managing short stories. Built with Laravel and Breeze, it offers a clean UI and essential CRUD features in a lightweight project.",
-    url: "https://write-onn.vercel.app/",
-    techs: [
-      "/Laravel.png",
-      "/tailwind.png",
-      "/mysql.png"
-      ,"/Livewire.png"
-    ],
-  },
+
 ];
 
 export const Portofolio = () => {
