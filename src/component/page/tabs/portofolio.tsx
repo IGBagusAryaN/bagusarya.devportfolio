@@ -9,7 +9,7 @@ import { ScrollFadeIn } from "../../scroll-page";
 
 const data = [
   {
-    id: 1,
+    id: 4,
     img: "/circle.png",
     title: "Circle App",
     desc: "Circle App is a modern social platform with a sleek dark UI for interactive connections. It offers smooth interactions and personalized suggestions.",
@@ -24,7 +24,7 @@ const data = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     img: "/lakoe.png",
     title: "Lakoe",
     desc: "Lakoe App is a modern e-commerce platform with a minimalist UI for easy and secure shopping. It features personalized recommendations and a smooth checkout.",
@@ -37,7 +37,7 @@ const data = [
       "/postgre.png",],
   },
   {
-    id: 3,
+    id: 2,
     img: "/travelhunt.png",
     title: "TravelHunt",
     desc: "TravelHunt is a web app that helps users easily choose the best travel destination in Indonesia through informative visuals and descriptions.",
@@ -51,7 +51,7 @@ const data = [
     ],
   },
   {
-    id: 4,
+    id: 1,
     img: "/writeon.png",
     title: "WriteOn",
     desc: "Write On is a simple web app for creating and managing short stories. Built with Laravel and Breeze, it offers a clean UI and essential CRUD features in a lightweight project.",
@@ -60,7 +60,7 @@ const data = [
       "/Laravel.png",
       "/tailwind.png",
       "/mysql.png"
-
+      ,"/Livewire.png"
     ],
   },
 ];
