@@ -32,6 +32,18 @@ const data = [
       "/Laravel.png",
       "/tailwind.png",
       "/mysql.png"
+    ],
+  },
+  {
+    id: 1,
+    img: "/dailypresence.png",
+    title: "DailyPresence",
+    desc: "Daily Presence is a web platform designed to simplify digital student attendance. It supports multi-authentication for admins and teachers, providing each role with access and features based on their responsibilities.",
+    url: "https://dailypresence.vercel.app/",
+    techs: [
+      "/Laravel.png",
+      "/tailwind.png",
+      "/mysql.png"
       ,"/Livewire.png"
     ],
   },
@@ -104,7 +116,7 @@ const Card = ({
         src={item.img}
         alt={item.title}
         fill
-        className="object-cover rounded-2xl"
+        className="object-cover rounded-2xl p-5"
       />
 
       <AnimatePresence>

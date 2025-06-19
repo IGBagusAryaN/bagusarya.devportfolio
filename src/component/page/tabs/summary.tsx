@@ -30,10 +30,6 @@ export const Summary = () => {
   const isDarkMode = theme === "dark";
   const setActiveTab = useTabStore((state) => state.setActiveTab);
 
-  const scrollRef = useRef(null);
-
-  // Gandakan array agar efek looping seamless
-  const clonedStack = [...stack, ...stack];
   return (
     <div className="w-full">
     
@@ -82,13 +78,13 @@ export const Summary = () => {
           project I build meets high standards of quality and usability.
         </p>
       </div>
-      {/* Description */}
+    
 
       </ScrollFadeIn>
       <hr className="border-b-1 border-dashed border-gray-300 my-10" />
 
       <ScrollFadeIn delay={0.3}>
-      {/* Tools */}
+  
       <div className="text-[28px] mb-5">Tools that I have used</div>
       <div className="grid grid-cols-2 md:grid-cols-6 gap-2 text-center z-10">
         {stack.map((tech) => {
@@ -118,15 +114,12 @@ export const Summary = () => {
           );
         })}
       </div>
-      {/* Tools */}
       </ScrollFadeIn>
       
       <hr className="border-b-1 border-dashed border-gray-300 my-10" />
 
       <ScrollFadeIn delay={0.6}>
 
-    
-      {/* Content */}
       <div className="text-[28px] mb-5">What I’ve Been Up To</div>
       <div className="grid md:grid-cols-[2fr_1fr]">
         <div className="">
@@ -151,7 +144,6 @@ export const Summary = () => {
           {theme === "dark" ? <RocketDarkAnimation /> : <RocketAnimation />}
         </div>
       </div>
-      {/* Content */}
       </ScrollFadeIn>
     </div>
   );
