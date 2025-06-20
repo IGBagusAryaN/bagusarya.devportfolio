@@ -135,7 +135,7 @@ const Card = ({
             <p className="text-sm my-3">{item.desc}</p>
             <div className="flex items-end h-full">
               {/* <p>Tech Stack : </p> */}
-              <div className="flex gap-1 mb-10 md:mb-0">
+              <div className="flex gap-1 mb-0">
                 {item.techs.map((src, idx) => (
                   <Image key={idx} src={src} alt="" width={28} height={28} className=""/>
                 ))}
