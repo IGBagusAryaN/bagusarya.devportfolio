@@ -129,7 +129,7 @@ const Card = ({
             className="absolute inset-0 flex flex-col bg-black opacity-80 text-white py-5 px-6 h-full"
           >
             <div className="flex justify-between items-center">
-              <h3 className="text-2xl font-semibold">{item.title}</h3>
+              <h3 className=" text-xl md:text-2xl font-semibold">{item.title}</h3>
               <LiveDemo url={item.url} />
             </div>
             <p className="text-sm my-3">{item.desc}</p>
@@ -137,7 +137,7 @@ const Card = ({
               {/* <p>Tech Stack : </p> */}
               <div className="flex gap-1 mb-10 md:mb-0">
                 {item.techs.map((src, idx) => (
-                  <Image key={idx} src={src} alt="" width={28} height={28} className="" />
+                  <Image key={idx} src={src} alt="" width={28} height={28} className=""/>
                 ))}
               </div>
             </div>
