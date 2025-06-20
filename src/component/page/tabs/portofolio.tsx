@@ -35,10 +35,10 @@ const data = [
     ],
   },
   {
-    id: 1,
+    id: 5,
     img: "/dailypresence.png",
     title: "DailyPresence",
-    desc: "Daily Presence is a web platform designed to simplify digital student attendance. It supports multi-authentication for admins and teachers, providing each role with access and features based on their responsibilities.",
+    desc: "Daily Presence is a web platform designed to simplify digital student attendance. It supports multi-authentication for admins and teachers.",
     url: "https://dailypresence.vercel.app/",
     techs: [
       "/Laravel.png",
