@@ -116,7 +116,7 @@ const Card = ({
         src={item.img}
         alt={item.title}
         fill
-        className="object-cover rounded-2xl p-5"
+        className="object-cover rounded-2xl"
       />
 
       <AnimatePresence>
