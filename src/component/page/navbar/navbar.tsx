@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import ThemeToggle from "../../attr/toggle-theme";
 import { useThemeStore } from "@/hooks/store/theme-store";
 import { Summary } from "../tabs/summary";
-import { Portofolio } from "../tabs/portofolio";
+import { Portofolio } from "../tabs/portfolio";
 import { About } from "../tabs/about";
 import { Contact } from "../tabs/contact";
 import ThemeToggleMobile from "../../attr/toggle-theme-mobile";
@@ -325,7 +325,7 @@ export const Navbar = () => {
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
             {activeTab === "Home" && <Summary />}
-            {activeTab === "Portofolio" && <Portofolio />}
+            {activeTab === "Portfolio" && <Portofolio />}
             {activeTab === "About" && <About />}
             {activeTab === "Contact" && <Contact />}
           </motion.div>
