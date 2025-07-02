@@ -80,7 +80,7 @@ const data = [
 
 export const Portofolio = () => {
   return (
-    <div>
+    <div className="mb-20">
       <ScrollFadeIn>
         <div className="text-[28px]">Portfolio</div>
         <p className="text-[#969191]">
