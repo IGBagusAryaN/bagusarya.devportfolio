@@ -82,9 +82,9 @@ export const Portofolio = () => {
   return (
     <div>
       <ScrollFadeIn>
-        <div className="text-[28px]">Portofolio</div>
+        <div className="text-[28px]">Portfolio</div>
         <p className="text-[#969191]">
-          Several projects that I have worked on, both private and open source.
+          Several projects that I have worked on.
         </p>
         <hr className="border-b-1 border-dashed border-gray-300 mt-3 mb-10" />
         <div className="grid  grid-cols-1 md:grid-cols-2 gap-5">

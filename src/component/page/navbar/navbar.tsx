@@ -21,10 +21,10 @@ export const Navbar = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 640); // 640px adalah breakpoint `sm` di Tailwind
+      setIsSmallScreen(window.innerWidth < 640); 
     };
 
-    handleResize(); // Panggil sekali saat pertama render
+    handleResize(); 
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
@@ -62,7 +62,7 @@ export const Navbar = () => {
       ),
     },
     {
-      name: "Portofolio",
+      name: "Portfolio",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
