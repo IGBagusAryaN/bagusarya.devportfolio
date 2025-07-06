@@ -261,7 +261,7 @@ export const Navbar = () => {
                           : "hover:bg-gray-100"
                       } ${
                         activeTab === tab.name &&
-                        (theme === "dark" ? "bg-#303030" : "bg-gray-100")
+                        (theme === "dark" ? "bg-[#303030]" : "bg-gray-100")
                       }`}
                       onClick={() => {
                         setActiveTab(tab.name);
