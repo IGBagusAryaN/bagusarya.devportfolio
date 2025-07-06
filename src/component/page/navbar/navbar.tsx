@@ -258,10 +258,10 @@ export const Navbar = () => {
                       className={`flex items-center rounded-[6px] gap-2 cursor-pointer px-4 py-2  ${
                         theme === "dark"
                           ? "hover:bg-[#303030]"
-                          : "hover:bg-gray-200"
+                          : "hover:bg-gray-100"
                       } ${
                         activeTab === tab.name &&
-                        (theme === "dark" ? "bg-#303030" : "bg-gray-200")
+                        (theme === "dark" ? "bg-#303030" : "bg-gray-100")
                       }`}
                       onClick={() => {
                         setActiveTab(tab.name);
