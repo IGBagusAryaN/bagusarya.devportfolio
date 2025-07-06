@@ -9,6 +9,34 @@ import { ScrollFadeIn } from "../../scroll-page";
 
 const data = [
     {
+    id: 4,
+    img: "/circle.png",
+    title: "Circle App",
+    desc: "Circle App is a modern social platform with a sleek dark UI for interactive connections. It offers smooth interactions and personalized suggestions.",
+    url: "https://circle-app-socialmedia.vercel.app",
+    techs: [
+      "/React.svg",
+      "/chakra.png",
+      "/express-light.svg",
+      "/prisma.png",
+      "/ts.png",
+      "/postgre.png",
+    ],
+  },
+  {
+    id: 3,
+    img: "/lakoe.png",
+    title: "Lakoe",
+    desc: "Lakoe App is a modern e-commerce platform with a minimalist UI for easy and secure shopping. It features personalized recommendations and a smooth checkout.",
+    url: "https://www.lakoe.site/",
+    techs: [   "/React.svg",
+      "/chakra.png",
+      "/express-light.svg",
+      "/prisma.png",
+      "/ts.png",
+      "/postgre.png",],
+  },
+    {
     id: 2,
     img: "/travelhunt.png",
     title: "TravelHunt",
@@ -47,35 +75,6 @@ const data = [
       ,"/Livewire.png"
     ],
   },
-  {
-    id: 4,
-    img: "/circle.png",
-    title: "Circle App",
-    desc: "Circle App is a modern social platform with a sleek dark UI for interactive connections. It offers smooth interactions and personalized suggestions.",
-    url: "https://circle-app-socialmedia.vercel.app",
-    techs: [
-      "/React.svg",
-      "/chakra.png",
-      "/express-light.svg",
-      "/prisma.png",
-      "/ts.png",
-      "/postgre.png",
-    ],
-  },
-  {
-    id: 3,
-    img: "/lakoe.png",
-    title: "Lakoe",
-    desc: "Lakoe App is a modern e-commerce platform with a minimalist UI for easy and secure shopping. It features personalized recommendations and a smooth checkout.",
-    url: "https://www.lakoe.site/",
-    techs: [   "/React.svg",
-      "/chakra.png",
-      "/express-light.svg",
-      "/prisma.png",
-      "/ts.png",
-      "/postgre.png",],
-  },
-
 ];
 
 export const Portofolio = () => {
