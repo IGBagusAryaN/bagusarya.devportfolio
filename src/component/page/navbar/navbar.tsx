@@ -154,7 +154,7 @@ export const Navbar = () => {
               >
                 <motion.img
                   src="/profilepicture.jpeg"
-                  className="object-cover "
+                  className="object-cover rounded-xl"
                   initial={{ scale: 1, opacity: 1 }}
                   animate={{ scale: hidden ? 0 : 1, opacity: hidden ? 0 : 1 }}
                   transition={{ duration: 0.5, ease: "easeInOut" }}
