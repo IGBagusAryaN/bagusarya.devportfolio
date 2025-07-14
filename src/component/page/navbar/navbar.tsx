@@ -234,7 +234,7 @@ export const Navbar = () => {
                 </div>
               </div>
               <div className="hidden md:block text-[#969191]">
-                -Based in Bali, Indonesia 🇮🇩
+                -Based in South Tangerang, Indonesia 🇮🇩
               </div>
             </div>
           </div>
