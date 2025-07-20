@@ -51,7 +51,7 @@ export const Summary = () => {
       </motion.span>
     </div>
 
-      <div className="flex gap-4 text-[#969191] mt-2 sm:block md:hidden ">
+      <div className="flex text-xs gap-4 text-[#969191] mt-2 sm:block md:hidden  ">
         <div>• South Tangerang, Indonesia 🇮🇩</div>
         <div>• Full-Stack Developer</div>
       </div>
