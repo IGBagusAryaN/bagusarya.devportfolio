@@ -15,7 +15,7 @@ const stack = [
   { image: "vite.png", name: "ViteJs" },
   { image: "next.svg", name: "NextJs" },
   { image: "ts.png", name: "TypeScript" },
-  { image: "zustand.png", name: "Zustand" },
+  { image: "docker.png", name: "Docker" },
   { image: "express.svg", name: "Express" },
   { image: "node.png", name: "NodeJs" },
   { image: "postgre.png", name: "Postgre" },
