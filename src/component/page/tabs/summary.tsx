@@ -31,7 +31,7 @@ export const Summary = () => {
   const setActiveTab = useTabStore((state) => state.setActiveTab);
 
   return (
-    <div className="w-full">
+    <div className="w-full max-w-[920px] mx-auto">
     
     <ScrollFadeIn>
     <div className="text-[28px]">

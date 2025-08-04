@@ -3,7 +3,7 @@ import { ScrollFadeIn } from "../../scroll-page";
 
 export const Contact = () => {
   return (
-    <div>
+    <div className="w-full max-w-[920px] mx-auto">
       <ScrollFadeIn>
       <div className="text-[28px]">Contact</div>
       <p className="text-[#969191]">
