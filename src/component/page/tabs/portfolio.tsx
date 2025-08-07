@@ -117,7 +117,7 @@ const Card = ({
   return (
     <div
       className={`relative w-full h-60 rounded-2xl overflow-hidden border bg-white !important${
-        theme === "dark" ? "border-[#404040]" : "border-gray-300"
+        theme === "dark" ? "border-gray-300" : "border-[#404040]"
       } `}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
