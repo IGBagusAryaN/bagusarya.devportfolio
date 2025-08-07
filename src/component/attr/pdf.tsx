@@ -3,18 +3,18 @@
 import { useEffect, useState } from "react";
 import { Worker, Viewer } from "@react-pdf-viewer/core";
 import "@react-pdf-viewer/core/lib/styles/index.css";
-
+import "../../app/globals.css";
 export const PdfViewer = () => {
   const [scale, setScale] = useState(0.72);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       const handleResize = () => {
-        setScale(window.innerWidth < 400 ? 0.56 : 0.72); // 768px = Tailwind 'md'
+        setScale(window.innerWidth < 768 ? 0.56 : 0.72); 
       };
 
-      handleResize(); // run once on mount
-      window.addEventListener("resize", handleResize); // optional: if you want it to adjust dynamically
+      handleResize(); 
+      window.addEventListener("resize", handleResize); 
 
       return () => window.removeEventListener("resize", handleResize);
     }
@@ -27,7 +27,7 @@ export const PdfViewer = () => {
           style={{
             height: "auto",
             overflowY: "auto",
-            overflowX: "hidden",
+            overflowX: "hidden"
           }}
         >
           <Viewer fileUrl="/pdf/CV.pdf" defaultScale={scale} />

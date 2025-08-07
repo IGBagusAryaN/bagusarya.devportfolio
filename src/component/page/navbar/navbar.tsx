@@ -179,7 +179,7 @@ export const Navbar = () => {
               </motion.div>
             </motion.div>
 
-            <div className="flex flex-col items-end justify-end mt-2">
+            <div className="flex flex-col items-end justify-end mt-3 gap-3">
               <div className="flex gap-3 items-center">
                 <ThemeToggle />
                 <div className="md:hidden">
@@ -233,7 +233,7 @@ export const Navbar = () => {
                   </button>
                 </div>
               </div>
-              <div className="hidden md:block text-[#969191]">
+              <div className="hidden md:block text-[#969191] ">
                 -Based in South Tangerang, Indonesia 🇮🇩
               </div>
             </div>

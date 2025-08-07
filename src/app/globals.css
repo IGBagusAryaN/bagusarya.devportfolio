@@ -28,4 +28,25 @@ body {
   font-family: var(--font-outfit), sans-serif;
 }
 
+/* Hilangkan semua shadow di viewer */
+.rpv-core__page-layer,
+.rpv-core__inner-page,
+.rpv-core__canvas-layer {
+  box-shadow: none !important;
+  filter: none !important;
+  background: none !important;
+}
 
+/* Hilangkan background putih default dan padding */
+.rpv-core__page-layer,
+.rpv-core__inner-page {
+  background-color: transparent !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Jika canvas PDF tetap punya bayangan */
+.rpv-core__canvas-layer canvas {
+  box-shadow: none !important;
+  filter: none !important;
+}

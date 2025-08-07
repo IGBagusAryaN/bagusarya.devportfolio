@@ -10,7 +10,7 @@ import { ScrollFadeIn } from "../../scroll-page";
 const data = [
     {
     id: 4,
-    img: "/circle.png",
+    img: "/circle1.png",
     title: "Circle App",
     desc: "Circle App is a modern social platform with a sleek dark UI for interactive connections. It offers smooth interactions and personalized suggestions.",
     url: "https://circle-app-socialmedia.vercel.app",
@@ -38,7 +38,7 @@ const data = [
   // },
     {
     id: 2,
-    img: "/travelhunt.png",
+    img: "/travelhunt1.png",
     title: "TravelHunt",
     desc: "TravelHunt is a web app that helps users easily choose the best travel destination in Indonesia through informative visuals and descriptions.",
     url: "https://travel-hunt-alpha.vercel.app/",
@@ -52,7 +52,7 @@ const data = [
   },
   {
     id: 1,
-    img: "/writeon.png",
+    img: "/writeon1.png",
     title: "WriteOn",
     desc: "Write On is a simple web app for creating and managing short stories. Built with Laravel and Breeze, it offers a clean UI and essential CRUD features in a lightweight project.",
     url: "https://write-onn.vercel.app/",
@@ -62,19 +62,19 @@ const data = [
       "/mysql.png"
     ],
   },
-  {
-    id: 5,
-    img: "/dailypresence.png",
-    title: "DailyPresence",
-    desc: "Daily Presence is a web platform designed to simplify digital student attendance. It supports multi-authentication for admins and teachers.",
-    url: "https://dailypresence.vercel.app/",
-    techs: [
-      "/Laravel.png",
-      "/tailwind.png",
-      "/mysql.png"
-      ,"/Livewire.png"
-    ],
-  },
+  // {
+  //   id: 5,
+  //   img: "/dailypresence.png",
+  //   title: "DailyPresence",
+  //   desc: "Daily Presence is a web platform designed to simplify digital student attendance. It supports multi-authentication for admins and teachers.",
+  //   url: "https://dailypresence.vercel.app/",
+  //   techs: [
+  //     "/Laravel.png",
+  //     "/tailwind.png",
+  //     "/mysql.png"
+  //     ,"/Livewire.png"
+  //   ],
+  // },
 ];
 
 export const Portofolio = () => {
@@ -115,7 +115,7 @@ const Card = ({
         src={item.img}
         alt={item.title}
         fill
-        className="object-cover rounded-2xl"
+      className="md:object-cover object-contain rounded-2xl"
       />
 
       <AnimatePresence>
