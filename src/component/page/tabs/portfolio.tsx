@@ -3,9 +3,9 @@
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
-import { LiveDemo } from "../../attr/livedemo";
 import { useThemeStore } from "@/hooks/store/theme-store";
 import { ScrollFadeIn } from "../../scroll-page";
+import { LiveDemo } from "@/component/attr/livedemo";
 
 const data = [
     {
@@ -36,6 +36,17 @@ const data = [
   //     "/ts.png",
   //     "/postgre.png",],
   // },
+  {
+    id: 3,
+    img: "/Meetio.png",
+    title: "Meetio",
+    desc: "Book your appointments in seconds. Fast, easy, and reliable.",
+    url: "",
+    techs: [ "/next-light.svg",
+      "/shadcn.png",
+      "/prisma.png",
+      "/tailwind.png"]
+  },
     {
     id: 2,
     img: "/travelhunt1.png",
@@ -105,7 +116,7 @@ const Card = ({
   const { theme } = useThemeStore();
   return (
     <div
-      className={`relative w-full h-60 rounded-2xl overflow-hidden border ${
+      className={`relative w-full h-60 rounded-2xl overflow-hidden border bg-white !important${
         theme === "dark" ? "border-[#404040]" : "border-gray-300"
       } `}
       onMouseEnter={() => setHovered(true)}
