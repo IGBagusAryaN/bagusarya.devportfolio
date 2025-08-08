@@ -24,19 +24,6 @@ const data = [
     ],
   },
   {
-    id: 5,
-    img: "/lakoe1.png",
-    title: "Lakoe",
-    desc: "Lakoe App is a modern e-commerce platform with a minimalist UI for easy and secure shopping. It features personalized recommendations and a smooth checkout.",
-    url: "https://www.lakoe.site/",
-    techs: [   "/React.svg",
-      "/chakra.png",
-      "/express-light.svg",
-      "/prisma.png",
-      "/ts.png",
-      "/postgre.png",],
-  },
-  {
     id: 3,
     img: "/Meetio.png",
     title: "Meetio",
@@ -46,9 +33,9 @@ const data = [
       "/shadcn.png",
       "/prisma.png",
       "/tailwind.png"]
-  },
+    },
     {
-    id: 2,
+      id: 2,
     img: "/travelhunt1.png",
     title: "TravelHunt",
     desc: "TravelHunt is a web app that helps users easily choose the best travel destination in Indonesia through informative visuals and descriptions.",
@@ -72,6 +59,19 @@ const data = [
       "/tailwind.png",
       "/mysql.png"
     ],
+  },
+  {
+    id: 5,
+    img: "/lakoe1.png",
+    title: "Lakoe",
+    desc: "Lakoe App is a modern e-commerce platform with a minimalist UI for easy and secure shopping. It features personalized recommendations and a smooth checkout.",
+    url: "https://www.lakoe.site/",
+    techs: [   "/React.svg",
+      "/chakra.png",
+      "/express-light.svg",
+      "/prisma.png",
+      "/ts.png",
+      "/postgre.png",],
   },
   // {
   //   id: 5,
