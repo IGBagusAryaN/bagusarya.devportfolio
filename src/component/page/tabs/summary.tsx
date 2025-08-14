@@ -53,7 +53,7 @@ export const Summary = () => {
 
       <div className="flex text-xs gap-4 text-[#969191] mt-2 sm:block md:hidden  ">
         <div>• South Tangerang, Indonesia 🇮🇩</div>
-        <div>• Full-Stack Developer</div>
+        <div>• Front-end Developer</div>
       </div>
 
       <div className="text-[#969191] mt-3 ">
@@ -81,8 +81,8 @@ export const Summary = () => {
     
 
       </ScrollFadeIn>
-      <hr className="border-b-1 border-dashed border-gray-300 my-10" />
 
+      <hr className="border-b-1 border-dashed border-gray-300 my-10" />
       <ScrollFadeIn delay={0.3}>
   
       <div className="text-[28px] mb-5">Tools that I have used</div>

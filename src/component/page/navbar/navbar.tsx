@@ -174,7 +174,7 @@ export const Navbar = () => {
                   Bagus Arya
                 </div>
                 <p className="hidden  md:block text-[16px] text-[#969191]">
-                  Full-Stack Developer
+                  Front-end Developer
                 </p>
               </motion.div>
             </motion.div>

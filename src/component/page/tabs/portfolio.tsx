@@ -90,7 +90,7 @@ const data = [
 
 export const Portofolio = () => {
   return (
-    <div className="pb-20 max-w-[920px] mx-auto">
+    <div className="pb-20 w-full max-w-[920px] mx-auto layout-container">
       <ScrollFadeIn>
         <div className="text-[28px]">Portfolio</div>
         <p className="text-[#969191]">
