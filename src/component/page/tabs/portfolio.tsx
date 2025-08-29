@@ -23,17 +23,17 @@ const data = [
       "/postgre.png",
     ],
   },
-  // {
-  //   id: 3,
-  //   img: "/Meetio.png",
-  //   title: "Meetio",
-  //   desc: "Book your appointments in seconds. Fast, easy, and reliable.",
-  //   url: "",
-  //   techs: [ "/next-light.svg",
-  //     "/shadcn.png",
-  //     "/prisma.png",
-  //     "/tailwind.png"]
-  //   },
+  {
+    id: 3,
+    img: "/Meetio.png",
+    title: "Meetio",
+    desc: "Book your appointments in seconds. Fast, easy, and reliable.",
+    url: "https://meetio-yi7k.vercel.app/",
+    techs: [ "/next-light.svg",
+      "/shadcn.png",
+      "/prisma.png",
+      "/tailwind.png"]
+    },
     {
       id: 2,
     img: "/travelhunt1.png",
