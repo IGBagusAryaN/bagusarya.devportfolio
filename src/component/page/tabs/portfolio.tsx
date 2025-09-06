@@ -8,7 +8,7 @@ import { ScrollFadeIn } from "../../scroll-page";
 import { LiveDemo } from "@/component/attr/livedemo";
 
 const data = [
-    {
+  {
     id: 4,
     img: "/circle1.png",
     title: "Circle App",
@@ -29,13 +29,17 @@ const data = [
     title: "Meetio",
     desc: "Book your appointments in seconds. Fast, easy, and reliable.",
     url: "https://meetio-yi7k.vercel.app/",
-    techs: [ "/next-light.svg",
+    techs: [
+      "/next-light.svg",
       "/shadcn.png",
       "/prisma.png",
-      "/tailwind.png"]
-    },
-    {
-      id: 2,
+      "/tailwind.png",
+      "/javascript.png",
+      "/pwa.svg"
+    ],
+  },
+  {
+    id: 2,
     img: "/travelhunt1.png",
     title: "TravelHunt",
     desc: "TravelHunt is a web app that helps users easily choose the best travel destination in Indonesia through informative visuals and descriptions.",
@@ -54,11 +58,7 @@ const data = [
     title: "WriteOn",
     desc: "Write On is a simple web app for creating and managing short stories. Built with Laravel and Breeze, it offers a clean UI and essential CRUD features in a lightweight project.",
     url: "https://write-onn.vercel.app/",
-    techs: [
-      "/Laravel.png",
-      "/tailwind.png",
-      "/mysql.png"
-    ],
+    techs: ["/Laravel.png", "/tailwind.png", "/mysql.png"],
   },
   {
     id: 5,
@@ -66,12 +66,14 @@ const data = [
     title: "Lakoe",
     desc: "Lakoe App is a modern e-commerce platform with a minimalist UI for easy and secure shopping. It features personalized recommendations and a smooth checkout.",
     url: "https://www.lakoe.site/",
-    techs: [   "/React.svg",
+    techs: [
+      "/React.svg",
       "/chakra.png",
       "/express-light.svg",
       "/prisma.png",
       "/ts.png",
-      "/postgre.png",],
+      "/postgre.png",
+    ],
   },
   // {
   //   id: 5,
@@ -110,14 +112,22 @@ export const Portofolio = () => {
 const Card = ({
   item,
 }: {
-  item: { img: string; title: string; desc: string; url: string; techs: string[] };
+  item: {
+    img: string;
+    title: string;
+    desc: string;
+    url: string;
+    techs: string[];
+  };
 }) => {
   const [hovered, setHovered] = useState(false);
   const { theme } = useThemeStore();
   return (
     <div
       className={`relative w-full h-60 rounded-2xl overflow-hidden border bg-white !important ${
-        theme === "dark" ? "border-[#404040] !important" : "border-gray-300 !important"
+        theme === "dark"
+          ? "border-[#404040] !important"
+          : "border-gray-300 !important"
       } `}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -126,7 +136,7 @@ const Card = ({
         src={item.img}
         alt={item.title}
         fill
-      className="md:object-cover object-contain rounded-2xl"
+        className="md:object-cover object-contain rounded-2xl"
       />
 
       <AnimatePresence>
@@ -139,7 +149,9 @@ const Card = ({
             className="absolute inset-0 flex flex-col bg-black opacity-80 text-white py-5 px-6 h-full"
           >
             <div className="flex justify-between items-center">
-              <h3 className=" text-xl md:text-2xl font-semibold">{item.title}</h3>
+              <h3 className=" text-xl md:text-2xl font-semibold">
+                {item.title}
+              </h3>
               <LiveDemo url={item.url} />
             </div>
             <p className="text-sm my-3">{item.desc}</p>
@@ -147,7 +159,18 @@ const Card = ({
               {/* <p>Tech Stack : </p> */}
               <div className="flex gap-1 mb-0">
                 {item.techs.map((src, idx) => (
-                  <Image key={idx} src={src} alt="" width={28} height={28} className=""/>
+                  <div
+                    key={idx}
+                    className="w-7 h-7 flex items-center justify-center"
+                  >
+                    <Image
+                      src={src}
+                      alt=""
+                      width={28}
+                      height={28}
+                      className="object-contain"
+                    />
+                  </div>
                 ))}
               </div>
             </div>
