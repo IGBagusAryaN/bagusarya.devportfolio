@@ -144,7 +144,7 @@ export const Navbar = () => {
               transition={{ duration: 0.5, ease: "easeInOut" }}
             >
               <motion.div
-                className="overflow-hidden rounded-xl z-20"
+                className="overflow-hidden rounded-lg z-20"
                 initial={{
                   width: isSmallScreen ? "50px" : "100px",
                   opacity: 1,
@@ -156,7 +156,7 @@ export const Navbar = () => {
                 transition={{ duration: 0.5, ease: "easeInOut" }}
               >
                 <motion.img
-                  src="/profilepicture.jpeg"
+                  src="/profilepicture.jpg"
                   className="object-cover rounded-xl"
                   initial={{ scale: 1, opacity: 1 }}
                   animate={{ scale: hidden ? 0 : 1, opacity: hidden ? 0 : 1 }}

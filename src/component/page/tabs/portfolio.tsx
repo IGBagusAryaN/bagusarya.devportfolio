@@ -75,6 +75,20 @@ const data = [
       "/postgre.png",
     ],
   },
+  {
+    id: 6,
+    img: "/goodbudget.png",
+    title: "GoodBudget",
+    desc: "Easily log your daily expenses and income with just a few clicks. Get clear insights into your spending and manage your money better",
+    url: "/",
+    techs: [
+      "/react-native.png",
+      "/express-light.svg",
+      "/javascript.png",
+      "/postgre.png",
+      "/expo-go.svg"
+    ],
+  },
   // {
   //   id: 5,
   //   img: "/dailypresence.png",
