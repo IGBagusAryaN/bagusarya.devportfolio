@@ -18,11 +18,17 @@ const stack = [
   { image: "docker.png", name: "Docker" },
   { image: "express.svg", name: "Express" },
   { image: "node.png", name: "NodeJs" },
-  { image: "postgre.png", name: "Postgre" },
+  { image: "postgre.svg", name: "Postgre" },
   { image: "chakra.png", name: "ChakraUI" },
   { image: "prisma.png", name: "PrismaORM" },
   { image: "Laravel.png", name: "Laravel" },
   { image: "tailwind.png", name: "Tailwind" },
+  { image: "javascript.png", name: "Javascript" },
+  { image: "PHP.png", name: "PHP" },
+  { image: "react-native.png", name: "React Native" },
+  { image: "mysql.png", name: "mySQL" },
+  { image: "Bootstrap.png", name: "Bootstrap" },
+  { image: "zustand.png", name: "Zustand" },
 ];
 
 export const Summary = () => {

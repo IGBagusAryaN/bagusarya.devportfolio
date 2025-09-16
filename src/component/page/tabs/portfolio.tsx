@@ -20,7 +20,7 @@ const data = [
       "/express-light.svg",
       "/prisma.png",
       "/ts.png",
-      "/postgre.png",
+      "/postgre.svg",
     ],
   },
   {
@@ -49,7 +49,7 @@ const data = [
       "/express-light.svg",
       "/prisma.png",
       "/ts.png",
-      "/postgre.png",
+      "/postgre.svg",
     ],
   },
   {
@@ -72,7 +72,7 @@ const data = [
       "/express-light.svg",
       "/prisma.png",
       "/ts.png",
-      "/postgre.png",
+      "/postgre.svg",
     ],
   },
   {
@@ -85,7 +85,7 @@ const data = [
       "/react-native.png",
       "/express-light.svg",
       "/javascript.png",
-      "/postgre.png",
+      "/postgre.svg",
       "/expo-go.svg"
     ],
   },
