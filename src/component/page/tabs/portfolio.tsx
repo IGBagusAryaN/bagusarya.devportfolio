@@ -80,7 +80,7 @@ const data = [
     img: "/goodbudget.png",
     title: "GoodBudget",
     desc: "Easily log your daily expenses and income with just a few clicks. Get clear insights into your spending and manage your money better",
-    url: "/",
+    url: "https://expo.dev/accounts/aryaaarz/projects/mobile/builds/505995d7-e29f-4c1d-aa87-aea539135490",
     techs: [
       "/react-native.png",
       "/express-light.svg",
