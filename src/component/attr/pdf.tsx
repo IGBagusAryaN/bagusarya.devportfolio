@@ -13,7 +13,7 @@ const PdfViewer = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setScale(window.innerWidth < 768 ? 0.56 : 0.87);
+      setScale(window.innerWidth < 768 ? 0.66 : 0.87);
     };
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -21,7 +21,7 @@ const PdfViewer = () => {
   }, []);
 
   return (
-    <div className="w-full max-w-[650px] rounded-md overflow-hidden mt-5 border border-gray-200 mb-10 h-[780px] overflow-y-auto">
+    <div className="w-full max-w-[650px] rounded-md overflow-hidden mt-5 border border-gray-200 mb-10 h-[550px] lg:h-[780px] overflow-y-auto">
       <Document
         file="/pdf/CV.pdf"
         onLoadSuccess={({ numPages }) => setNumPages(numPages)}
