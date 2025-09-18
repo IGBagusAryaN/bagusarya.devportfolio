@@ -1,10 +1,16 @@
 import Image from "next/image";
-import { PdfViewer } from "../../attr/pdf";
+// import { PdfViewer } from "../../attr/pdf";
 import { useThemeStore } from "@/hooks/store/theme-store";
 import { motion } from "framer-motion";
 import { ScrollFadeIn } from "../../scroll-page";
+import dynamic from "next/dynamic";
 
+const Pdfviewer = dynamic(() => import("@/component/attr/pdf"), {
+  ssr: false,
+});
 export const About = () => {
+
+
   const { theme } = useThemeStore();
   return (
     <div className="max-w-[920px] mx-auto">
@@ -51,7 +57,7 @@ export const About = () => {
             </svg>
             Download my resume
           </motion.a>
-          <PdfViewer />
+          <Pdfviewer />
         </div>
         </ScrollFadeIn>
         <ScrollFadeIn delay={0.3} >
