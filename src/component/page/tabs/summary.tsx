@@ -7,8 +7,14 @@ import { useRef } from "react";
 import { ScrollFadeIn } from "../../scroll-page";
 import { useTabStore } from "@/hooks/store/tabs-store";
 
-const RocketAnimation = dynamic(() => import("@/component/animation/rocket-lottie"), { ssr: false });
-const RocketDarkAnimation = dynamic(() => import("@/component/animation/rocket-lottie-dark"), { ssr: false });
+const RocketAnimation = dynamic(
+  () => import("@/component/animation/rocket-lottie"),
+  { ssr: false }
+);
+const RocketDarkAnimation = dynamic(
+  () => import("@/component/animation/rocket-lottie-dark"),
+  { ssr: false }
+);
 
 const stack = [
   { image: "reactjs.png", name: "ReactJs" },
@@ -31,68 +37,98 @@ const stack = [
   { image: "zustand.png", name: "Zustand" },
 ];
 
+// komponen untuk tiap baris
+const MarqueeRow = ({
+  items,
+  reverse = false,
+}: {
+  items: typeof stack;
+  reverse?: boolean;
+}) => {
+  return (
+     <div className="overflow-hidden">
+      <motion.div
+        className="flex gap-3 w-max"
+        animate={{ x: reverse ? ["0%", "-20%"] : ["-20%", "0%"] }}
+        transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+      >
+        {[...items, ...items,...items,...items,...items,...items,...items,...items].map((tech, i) => (
+          <div
+            key={tech.name + i}
+            className="border rounded-lg px-3 py-2 flex items-center justify-center gap-2 text-[12px] border-gray-300"
+          >
+            <Image src={`/${tech.image}`} alt={tech.name} width={20} height={20} />
+            {tech.name}
+          </div>
+        ))}
+      </motion.div>
+    </div>
+
+  );
+};
+
 export const Summary = () => {
   const { theme } = useThemeStore();
   const isDarkMode = theme === "dark";
   const setActiveTab = useTabStore((state) => state.setActiveTab);
-
+ const rows = [
+    stack.slice(0, 6), // baris pertama
+    stack.slice(6, 12), // baris kedua
+    stack.slice(12, 18), // baris ketiga
+  ];
   return (
     <div className="w-full max-w-[920px] mx-auto">
-    
-    <ScrollFadeIn>
-    <div className="text-[28px]">
-      Hello, I'm Arya
-      <motion.span
-        animate={{
-          rotate: [0, 20, -10, 20, 0],
-        }}
-        transition={{
-          duration: 1.5,
-          repeat: Infinity,
-          repeatDelay: 1,
-        }}
-        style={{ display: "inline-block", originY: 0.7 }}
-      >
-        🖐️
-      </motion.span>
-    </div>
+      <ScrollFadeIn>
+        <div className="text-[28px]">
+          Hello, I'm Arya
+          <motion.span
+            animate={{
+              rotate: [0, 20, -10, 20, 0],
+            }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              repeatDelay: 1,
+            }}
+            style={{ display: "inline-block", originY: 0.7 }}
+          >
+            🖐️
+          </motion.span>
+        </div>
 
-      <div className="flex text-xs gap-4 text-[#969191] mt-2 sm:block md:hidden  ">
-        <div>• South Tangerang, Indonesia 🇮🇩</div>
-        <div>• Front-end Developer</div>
-      </div>
+        <div className="flex text-xs gap-4 text-[#969191] mt-2 sm:block md:hidden  ">
+          <div>• South Tangerang, Indonesia 🇮🇩</div>
+          <div>• Front-end Developer</div>
+        </div>
 
-      <div className="text-[#969191] mt-3 ">
-        <p className="text-justify">
-          I'm I Gede Bagus Arya Negara, a Frontend Web Developer passionate
-          about building clean, interactive, and user-friendly web applications.
-          I specialize in JavaScript and TypeScript, leveraging modern frontend
-          technologies to create seamless user experiences.
-        </p>
-        <p className="mt-3 text-justify">
-          Currently, I am honing my skills through an intensive bootcamp at
-          DumbWays while actively working on various projects—both individually
-          and collaboratively. Through these experiences, I've gained hands-on
-          expertise in developing dynamic web applications, improving UI/UX, and
-          optimizing performance.
-        </p>
-        <p className="mt-3 text-justify">
-          Beyond frontend development, I am also expanding my knowledge in
-          full-stack development to gain a deeper understanding of how web
-          applications function as a whole. My goal is to continuously improve
-          and stay updated with the latest technologies, ensuring that every
-          project I build meets high standards of quality and usability.
-        </p>
-      </div>
-    
-
+        <div className="text-[#969191] mt-3 ">
+          <p className="text-justify">
+            I'm I Gede Bagus Arya Negara, a Frontend Web Developer passionate
+            about building clean, interactive, and user-friendly web
+            applications. I specialize in JavaScript and TypeScript, leveraging
+            modern frontend technologies to create seamless user experiences.
+          </p>
+          <p className="mt-3 text-justify">
+            Currently, I am honing my skills through an intensive bootcamp at
+            DumbWays while actively working on various projects—both
+            individually and collaboratively. Through these experiences, I've
+            gained hands-on expertise in developing dynamic web applications,
+            improving UI/UX, and optimizing performance.
+          </p>
+          <p className="mt-3 text-justify">
+            Beyond frontend development, I am also expanding my knowledge in
+            full-stack development to gain a deeper understanding of how web
+            applications function as a whole. My goal is to continuously improve
+            and stay updated with the latest technologies, ensuring that every
+            project I build meets high standards of quality and usability.
+          </p>
+        </div>
       </ScrollFadeIn>
 
       <hr className="border-b-1 border-dashed border-gray-300 my-10" />
       <ScrollFadeIn delay={0.3}>
-  
-      <div className="text-[28px] mb-5">Tools that I have used</div>
-      <div className="grid grid-cols-2 md:grid-cols-6 gap-2 text-center z-10">
+        <div className="text-[28px] mb-5">Tools that I have used</div>
+        {/* <div className="grid grid-cols-2 md:grid-cols-6 gap-2 text-center z-10">
         {stack.map((tech) => {
           const isBlackLogo = tech.name === "NextJs" || tech.name === "Express";
           const imageSrc =
@@ -119,37 +155,45 @@ export const Summary = () => {
             </div>
           );
         })}
-      </div>
+      </div> */}
+        <div className="space-y-4">
+          <MarqueeRow items={rows[0]} reverse={false} />
+          <MarqueeRow items={rows[1]} reverse={true} />
+          <MarqueeRow items={rows[2]} reverse={false} />
+        </div>
       </ScrollFadeIn>
-      
+
       <hr className="border-b-1 border-dashed border-gray-300 my-10" />
 
       <ScrollFadeIn delay={0.6}>
+        <div className="text-[28px] mb-5">What I’ve Been Up To</div>
+        <div className="grid md:grid-cols-[2fr_1fr]">
+          <div className="">
+            <p className="text-[#969191]">
+              I'm looking for collaboration in Frontend Development! If you need
+              a developer who builds clean and interactive UIs, let's connect!
+            </p>
 
-      <div className="text-[28px] mb-5">What I’ve Been Up To</div>
-      <div className="grid md:grid-cols-[2fr_1fr]">
-        <div className="">
-          <p className="text-[#969191]">
-            I'm looking for collaboration in Frontend Development! If you need a
-            developer who builds clean and interactive UIs, let's connect!
-          </p>
-
-          <motion.button className={`w-full md:w-[27%] border cursor-pointer ${theme === "dark" ? "border-[#404040] bg-[#262626]" : "border-gray-300"} px-5 py-2 mt-3 rounded-2xl`}
-             whileHover={{ scale: 1.1 }}
-             transition={{ type: "spring", stiffness: 300 }}
-             onClick={() => {
-              console.log("Set ke Contact");
-              setActiveTab("Contact");
-            }}
-            
-          >
-            Contact me
-          </motion.button>
+            <motion.button
+              className={`w-full md:w-[27%] border cursor-pointer ${
+                theme === "dark"
+                  ? "border-[#404040] bg-[#262626]"
+                  : "border-gray-300"
+              } px-5 py-2 mt-3 rounded-2xl`}
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              onClick={() => {
+                console.log("Set ke Contact");
+                setActiveTab("Contact");
+              }}
+            >
+              Contact me
+            </motion.button>
+          </div>
+          <div className="flex justify-center relative">
+            {theme === "dark" ? <RocketDarkAnimation /> : <RocketAnimation />}
+          </div>
         </div>
-        <div className="flex justify-center relative">
-          {theme === "dark" ? <RocketDarkAnimation /> : <RocketAnimation />}
-        </div>
-      </div>
       </ScrollFadeIn>
     </div>
   );

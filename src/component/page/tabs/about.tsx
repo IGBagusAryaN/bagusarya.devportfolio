@@ -149,11 +149,11 @@ export const About = () => {
                   : "border-gray-300"
               }`}
             >
-              <div className="w-[80px] overflow-hidden p-1 mr-1.5">
+              <div className="w-[80px] overflow-hidden p-1">
                 <img
                   src={"/instiki.png"}
                   alt="instiki"
-                  className="object-cover"
+                  className="object-cover mx-5"
                 />
               </div>
               <div>
