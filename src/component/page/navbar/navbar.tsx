@@ -139,18 +139,18 @@ export const Navbar = () => {
           <div className="flex justify-between mt-3 items-center">
             <motion.div
               className="flex items-center"
-              initial={{ gap: 12 }}
-              animate={{ gap: hidden ? 0 : 12 }}
+              initial={{ gap: 0}}
+              animate={{ gap: hidden ? 0 : 0 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
             >
               <motion.div
                 className="overflow-hidden rounded-lg z-20"
                 initial={{
-                  width: isSmallScreen ? "50px" : "100px",
+                  width: isSmallScreen ? "50px" : "90px",
                   opacity: 1,
                 }}
                 animate={{
-                  width: hidden ? "0px" : isSmallScreen ? "50px" : "100px",
+                  width: hidden ? "0px" : isSmallScreen ? "50px" : "90px",
                   opacity: hidden ? 0 : 1,
                 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}

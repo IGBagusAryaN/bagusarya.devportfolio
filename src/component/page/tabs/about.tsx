@@ -94,7 +94,7 @@ export const About = () => {
                   : "border-gray-300"
               }`}
             >
-              <div className="w-[54px] overflow-hidden p-2 ml-[7px] mr-[7px]">
+              <div className="w-[54px] overflow-hidden p-2 ml-[7px] mr-[13.8px] md:mr-[7px]">
                 <img
                   src={"/dumbways.png"}
                   alt="instiki"
@@ -102,7 +102,7 @@ export const About = () => {
                 />
               </div>
               <div>
-                <p className="text-[14px]">PT Dumbways Indonesia Teknologi</p>
+                <p className="text-[14px]">Dumbways Indonesia Teknologi</p>
                 <p className="text-[14px] text-[#969191]">
                   Full-stack Dev • 2024-Present 
                 </p>
@@ -129,7 +129,7 @@ export const About = () => {
                 />
               </div>
               <div>
-                <p>PT Dumbways Indonesia Teknologi</p>
+                <p>Dumbways Indonesia Teknologi</p>
                 <p className="text-[14px] text-[#969191]">
                   Full-stack Developer
                 </p>
@@ -149,11 +149,11 @@ export const About = () => {
                   : "border-gray-300"
               }`}
             >
-              <div className="w-[80px] overflow-hidden p-1">
+              <div className="w-[80px] overflow-hidden p-1" >
                 <img
                   src={"/instiki.png"}
                   alt="instiki"
-                  className="object-cover mx-5"
+                  className="object-cover"
                 />
               </div>
               <div>
@@ -176,7 +176,7 @@ export const About = () => {
                   : "border-gray-300"
               }`}
             >
-              <div className="w-[80px] overflow-hidden p-1">
+              <div className="w-[80px] overflow-hidden p-1 mr-2.5">
                 <img
                   src={"/instiki.png"}
                   alt="instiki"

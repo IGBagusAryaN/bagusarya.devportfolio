@@ -34,6 +34,12 @@ const stack = [
   { image: "react-native.png", name: "React Native" },
   { image: "mysql.png", name: "mySQL" },
   { image: "Bootstrap.png", name: "Bootstrap" },
+  { image: "shadcn.png", name: "Shadcn UI" },
+  { image: "MaterialUI.png", name: "Material UI" },
+  { image: "HTML5.png", name: "HTML" },
+  { image: "CSS3.png", name: "CSS" },
+  { image: "Alpine.png", name: "Alpine js" },
+  { image: "framer.png", name: "Framer Motion" },
   { image: "zustand.png", name: "Zustand" },
 ];
 
@@ -41,29 +47,41 @@ const stack = [
 const MarqueeRow = ({
   items,
   reverse = false,
+  isDarkMode,
 }: {
   items: typeof stack;
   reverse?: boolean;
+  isDarkMode: boolean;
 }) => {
+  // daftar logo yang punya versi light
+  const logosWithLight = ["NextJs", "Express", "Shadcn UI"];
+
   return (
-     <div className="overflow-hidden">
+    <div className="overflow-hidden">
       <motion.div
         className="flex gap-3 w-max"
         animate={{ x: reverse ? ["0%", "-20%"] : ["-20%", "0%"] }}
         transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
       >
-        {[...items, ...items,...items,...items,...items,...items,...items,...items].map((tech, i) => (
-          <div
-            key={tech.name + i}
-            className="border rounded-lg px-3 py-2 flex items-center justify-center gap-2 text-[12px] border-gray-300"
-          >
-            <Image src={`/${tech.image}`} alt={tech.name} width={20} height={20} />
-            {tech.name}
-          </div>
-        ))}
+        {[...items, ...items, ...items].map((tech, i) => {
+          // tentukan src berdasarkan mode dark
+          const imageSrc =
+            isDarkMode && logosWithLight.includes(tech.name)
+              ? `/${tech.image.replace(".svg", "-light.svg")}`
+              : `/${tech.image}`;
+
+          return (
+            <div
+              key={tech.name + i}
+              className="border rounded-lg px-3 py-2 flex items-center justify-center gap-2 text-[12px] border-gray-300"
+            >
+              <Image src={imageSrc} alt={tech.name} width={20} height={20} />
+              {tech.name}
+            </div>
+          );
+        })}
       </motion.div>
     </div>
-
   );
 };
 
@@ -72,9 +90,9 @@ export const Summary = () => {
   const isDarkMode = theme === "dark";
   const setActiveTab = useTabStore((state) => state.setActiveTab);
  const rows = [
-    stack.slice(0, 6), // baris pertama
-    stack.slice(6, 12), // baris kedua
-    stack.slice(12, 18), // baris ketiga
+    stack.slice(0, 8), // baris pertama
+    stack.slice(8, 16), // baris kedua
+    stack.slice(16, 24), // baris ketiga
   ];
   return (
     <div className="w-full max-w-[920px] mx-auto">
@@ -157,9 +175,9 @@ export const Summary = () => {
         })}
       </div> */}
         <div className="space-y-4">
-          <MarqueeRow items={rows[0]} reverse={false} />
-          <MarqueeRow items={rows[1]} reverse={true} />
-          <MarqueeRow items={rows[2]} reverse={false} />
+            <MarqueeRow items={rows[0]} reverse={false} isDarkMode={isDarkMode} />
+  <MarqueeRow items={rows[1]} reverse={true} isDarkMode={isDarkMode} />
+  <MarqueeRow items={rows[2]} reverse={false} isDarkMode={isDarkMode} />
         </div>
       </ScrollFadeIn>
 
