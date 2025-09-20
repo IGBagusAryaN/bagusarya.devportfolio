@@ -28,8 +28,8 @@ export const metadata: Metadata = {
   },
     keywords: ["Bagus Arya", "Bagus Arya Portofolio", "Gede Bagus Arya"],
   openGraph: {
-    title: "I Gede Bagus Arya Negara Portofolio",
-    description: "",
+    title: "arzz portofolio",
+    description: "x",
     url: "https://fullstack-developer-bagusarya.vercel.app/",
     siteName: "Frontend-Developer",
     images: [
