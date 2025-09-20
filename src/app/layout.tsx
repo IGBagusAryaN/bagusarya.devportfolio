@@ -26,6 +26,22 @@ export const metadata: Metadata = {
   icons: {
     icon: "/a.svg", 
   },
+    keywords: ["Bagus Arya", "Bagus Arya Portofolio", "Gede Bagus Arya"],
+  openGraph: {
+    title: "I Gede Bagus Arya Negara Portofolio",
+    description: "",
+    url: "https://fullstack-developer-bagusarya.vercel.app/",
+    siteName: "Frontend-Developer",
+    images: [
+      {
+        url: "https://fullstack-developer-bagusarya.vercel.app/a.svg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "id_ID",
+    type: "website",
+  }
 };
 
 export default function RootLayout({

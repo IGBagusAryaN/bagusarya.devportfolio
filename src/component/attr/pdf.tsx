@@ -37,9 +37,9 @@ const PdfViewer = () => {
         }
       >
         {!loading && (
-          <div className="flex flex-col items-center py-6">
+          <div className="flex flex-col items-center !py-0">
             {Array.from(new Array(numPages), (_, i) => (
-              <div key={i} className="flex flex-col items-center w-full">
+              <div key={i} className="flex flex-col items-center w-full !py-0 rounded-full ">
                 <Page
                   pageNumber={i + 1}
                   scale={scale}
@@ -47,8 +47,8 @@ const PdfViewer = () => {
                   renderAnnotationLayer={false}
                 />
                 {i < numPages - 1 && (
-                  <div className="w-full flex justify-center">
-                    <div className="h-[2px] bg-gray-300 w-full max-w-[650px] my-8" />
+                  <div className="w-full flex justify-center  !py-0 rounded-full">
+                    <div className="h-[2px] bg-gray-300 w-full max-w-[650px]  rounded-full" />
                   </div>
                 )}
               </div>

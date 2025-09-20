@@ -73,7 +73,7 @@ const MarqueeRow = ({
           return (
             <div
               key={tech.name + i}
-              className="border rounded-lg px-3 py-2 flex items-center justify-center gap-2 text-[12px] border-gray-300"
+              className="border rounded-lg px-3 py-2 flex items-center justify-center gap-2 text-[12px] border-gray-200"
             >
               <Image src={imageSrc} alt={tech.name} width={20} height={20} />
               {tech.name}
