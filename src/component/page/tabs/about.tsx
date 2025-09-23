@@ -149,7 +149,7 @@ export const About = () => {
                   : "border-gray-300"
               }`}
             >
-              <div className="w-[80px] overflow-hidden p-1" >
+              <div className="w-[80px] overflow-hidden p-1 mr-3" >
                 <img
                   src={"/instiki.png"}
                   alt="instiki"
