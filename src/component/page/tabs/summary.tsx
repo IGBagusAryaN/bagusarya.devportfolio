@@ -55,6 +55,8 @@ const MarqueeRow = ({
 }) => {
   // daftar logo yang punya versi light
   const logosWithLight = ["NextJs", "Express", "Shadcn UI"];
+  const { theme } = useThemeStore();
+  const isDarkModeOn = theme === "dark";
 
   return (
     <div className="overflow-hidden">
@@ -73,7 +75,11 @@ const MarqueeRow = ({
           return (
             <div
               key={tech.name + i}
-              className="border rounded-lg px-3 py-2 flex items-center justify-center gap-2 text-[12px] border-gray-200"
+              className={`border rounded-lg px-3 py-2 flex items-center justify-center gap-2 text-[12px] ${
+                theme === "dark"
+                  ? "border-[#404040] bg-[#262626]"
+                  : "border-gray-300"
+              } `}
             >
               <Image src={imageSrc} alt={tech.name} width={20} height={20} />
               {tech.name}
@@ -89,7 +95,7 @@ export const Summary = () => {
   const { theme } = useThemeStore();
   const isDarkMode = theme === "dark";
   const setActiveTab = useTabStore((state) => state.setActiveTab);
- const rows = [
+  const rows = [
     stack.slice(0, 8), // baris pertama
     stack.slice(8, 16), // baris kedua
     stack.slice(16, 24), // baris ketiga
@@ -175,9 +181,9 @@ export const Summary = () => {
         })}
       </div> */}
         <div className="space-y-4">
-            <MarqueeRow items={rows[0]} reverse={false} isDarkMode={isDarkMode} />
-  <MarqueeRow items={rows[1]} reverse={true} isDarkMode={isDarkMode} />
-  <MarqueeRow items={rows[2]} reverse={false} isDarkMode={isDarkMode} />
+          <MarqueeRow items={rows[0]} reverse={false} isDarkMode={isDarkMode} />
+          <MarqueeRow items={rows[1]} reverse={true} isDarkMode={isDarkMode} />
+          <MarqueeRow items={rows[2]} reverse={false} isDarkMode={isDarkMode} />
         </div>
       </ScrollFadeIn>
 
