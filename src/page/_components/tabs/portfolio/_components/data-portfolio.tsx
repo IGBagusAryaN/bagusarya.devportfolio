@@ -16,7 +16,7 @@ export const portfolioData = [
   },
   {
     id: 3,
-    img: "/Meetio.png",
+    img: "/assets/png/Meetio.png",
     title: "Meetio",
     desc: "Book your appointments in seconds. Fast, easy, and reliable.",
     url: "https://meetio-yi7k.vercel.app/",
