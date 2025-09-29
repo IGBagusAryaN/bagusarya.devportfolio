@@ -22,7 +22,7 @@ export const portfolioData = [
     url: "https://meetio-yi7k.vercel.app/",
     techs: [
       "/assets/svg/next-light.svg",
-      "/shadcn-light.png",
+      "/assets/png/shadcn-light.png",
       "/assets/png/prisma.png",
       "/assets/png/tailwind.png",
       "/assets/png/javascript.png",
