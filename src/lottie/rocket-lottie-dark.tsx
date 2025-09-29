@@ -1,5 +1,5 @@
 import Lottie from "lottie-react";
-import animationData from "../../../public/rocket-dark.json";
+import animationData from "../../public/assets/json/rocket-dark.json";
 
 const RocketDarkAnimation = () => {
   return (

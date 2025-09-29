@@ -1,10 +1,9 @@
-import { HomePage } from "@/component/page/tabs/home";
-import Image from "next/image";
+import { Main } from "@/page/main-page";
 
-export default function Home() {
+export default function App() {
   return (
-    <div className="  md:pt-10 w-full px-[18px] md:mx-auto h-[150vh] relative">
-      <HomePage/>
-    </div>
+    <>
+      <Main/>
+    </>
   );
 }

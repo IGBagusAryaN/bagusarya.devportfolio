@@ -4,27 +4,27 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import { ScrollFadeIn } from "../../scroll-page";
+import { ScrollFadeIn } from "../../../../components/scroll-page";
 import { useTabStore } from "@/hooks/store/tabs-store";
 
 const RocketAnimation = dynamic(
-  () => import("@/component/animation/rocket-lottie"),
+  () => import("@/lottie/rocket-lottie"),
   { ssr: false }
 );
 const RocketDarkAnimation = dynamic(
-  () => import("@/component/animation/rocket-lottie-dark"),
+  () => import("@/lottie/rocket-lottie-dark"),
   { ssr: false }
 );
 
 const stack = [
   { image: "reactjs.png", name: "ReactJs" },
   { image: "vite.png", name: "ViteJs" },
-  { image: "next.svg", name: "NextJs" },
+  { image: "assets/svg/next.svg", name: "NextJs" },
   { image: "ts.png", name: "TypeScript" },
   { image: "docker.png", name: "Docker" },
-  { image: "express.svg", name: "Express" },
+  { image: "assets/svg/express.svg", name: "Express" },
   { image: "node.png", name: "NodeJs" },
-  { image: "postgre.svg", name: "Postgre" },
+  { image: "assets/svg/postgre.svg", name: "Postgre" },
   { image: "chakra.png", name: "ChakraUI" },
   { image: "prisma.png", name: "PrismaORM" },
   { image: "Laravel.png", name: "Laravel" },
@@ -43,7 +43,6 @@ const stack = [
   { image: "zustand.png", name: "Zustand" },
 ];
 
-// komponen untuk tiap baris
 const MarqueeRow = ({
   items,
   reverse = false,
@@ -53,10 +52,9 @@ const MarqueeRow = ({
   reverse?: boolean;
   isDarkMode: boolean;
 }) => {
-  // daftar logo yang punya versi light
   const logosWithLight = ["NextJs", "Express", "Shadcn UI"];
   const { theme } = useThemeStore();
-  const isDarkModeOn = theme === "dark";
+  // const isDarkModeOn = theme === "dark";
 
   return (
     <div className="overflow-hidden">
@@ -96,9 +94,9 @@ export const Summary = () => {
   const isDarkMode = theme === "dark";
   const setActiveTab = useTabStore((state) => state.setActiveTab);
   const rows = [
-    stack.slice(0, 8), // baris pertama
-    stack.slice(8, 16), // baris kedua
-    stack.slice(16, 24), // baris ketiga
+    stack.slice(0, 8), 
+    stack.slice(8, 16), 
+    stack.slice(16, 24), 
   ];
   return (
     <div className="w-full max-w-[920px] mx-auto">

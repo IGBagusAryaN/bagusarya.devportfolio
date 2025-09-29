@@ -14,7 +14,7 @@ const PdfViewer = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setScale(window.innerWidth < 768 ? 0.63 : 0.89);
+      setScale(window.innerWidth < 1024 ? 0.63 : 0.89);
     };
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -47,7 +47,7 @@ const PdfViewer = () => {
                   renderAnnotationLayer={false}
                 />
                 {i < numPages - 1 && (
-                  <div className="w-full flex justify-center  !py-0 rounded-full">
+                  <div className="w-full flex justify-center !py-0 rounded-full">
                     <div className="h-[2px] bg-gray-300 w-full max-w-[650px]  rounded-full" />
                   </div>
                 )}
