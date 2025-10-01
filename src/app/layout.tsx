@@ -23,7 +23,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   applicationName: "Bagus Arya Portfolio",
   icons: {
-    icon: "/a.svg",
+    icon: "/assets/svg/a.svg",
   },
   keywords: [
     "Bagus Arya",

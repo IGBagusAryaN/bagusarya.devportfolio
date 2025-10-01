@@ -31,7 +31,7 @@ const PdfViewer = () => {
         }}
         onLoadError={() => setLoading(false)}
         loading={
-          <div className="flex items-center justify-center h-[50vh]">
+          <div className="flex items-center justify-center h-[49vh]">
             <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-gray-600"></div>
           </div>
         }
