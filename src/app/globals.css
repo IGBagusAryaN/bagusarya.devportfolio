@@ -51,3 +51,8 @@ body {
   filter: none !important;
 }
 
+.col-span-full {
+  column-span: all;
+}
+
+

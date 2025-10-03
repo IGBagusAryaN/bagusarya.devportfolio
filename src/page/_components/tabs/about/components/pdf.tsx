@@ -22,7 +22,7 @@ const PdfViewer = () => {
   }, []);
 
   return (
-    <div className="w-full max-w-[650px] rounded-md overflow-hidden mt-5 border border-gray-200 mb-10 h-[550px] lg:h-[780px] overflow-y-auto">
+    <div className="w-full max-w-[650px] rounded-md overflow-hidden mt-5 border border-gray-200 mb-10 h-[550px] lg:h-[740px] overflow-y-auto">
       <Document
         file="/pdf/CV.pdf"
         onLoadSuccess={({ numPages }) => {

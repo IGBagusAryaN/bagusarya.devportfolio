@@ -18,10 +18,10 @@ export const MarqueeRow = ({
     <div className="overflow-hidden">
       <motion.div
         className="flex gap-3 w-max"
-        animate={{ x: reverse ? ["0%", "-20%"] : ["-20%", "0%"] }}
+        animate={{ x: reverse ? ["0%", "-10%"] : ["-10%", "0%"] }}
         transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
       >
-        {[...items, ...items, ...items].map((tech, i) => {
+        {[...items, ...items, ...items,...items,...items,...items].map((tech, i) => {
           const imageSrc =
             isDarkMode && logosWithLight.includes(tech.name)
               ? `/${tech.image.replace(".svg", "-light.svg")}`

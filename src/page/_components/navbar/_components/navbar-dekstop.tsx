@@ -15,7 +15,7 @@ export const NavbarDesktopMenu = () => {
         theme === "dark" ? "border-[#404040]" : "border-gray-300"
       } hidden md:block rounded-md mt-4`}
     >
-      <ul className="flex justify-between py-3 md:px-16 lg:px-24">
+      <ul className="flex justify-between py-3 md:px-16">
         {tabs.map((tab) => (
           <li
             key={tab.name}

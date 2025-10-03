@@ -8,7 +8,7 @@ export const Career = () => {
 
   return (
     <ScrollFadeIn delay={0.5}>
-      <div className="mt-10">
+      <div className="mt-10 mb-20 md:mb-0">
         <div className="flex items-center gap-2 mb-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
