@@ -32,6 +32,14 @@ export default function Others({ images = [] }: { images?: GalleryImage[] }) {
     { src: "/assets/others/placeholder-11.jpg", alt: "placeholder 11" },
     { src: "/assets/others/placeholder-12.jpg", alt: "placeholder 12" },
     { src: "/assets/others/placeholder-14.jpg", alt: "placeholder 14" },
+    { src: "/assets/others/placeholder-13.jpg", alt: "placeholder 13" },
+    { src: "/assets/others/placeholder-15.jpg", alt: "placeholder 15" },
+    { src: "/assets/others/placeholder-16.jpg", alt: "placeholder 16" },
+    { src: "/assets/others/placeholder-17.jpg", alt: "placeholder 17" },
+    { src: "/assets/others/placeholder-18.jpeg", alt: "placeholder 18" },
+    { src: "/assets/others/placeholder-19.jpeg", alt: "placeholder 19" },
+    { src: "/assets/others/placeholder-20.jpeg", alt: "placeholder 20" },
+    { src: "/assets/others/placeholder-21.jpeg", alt: "placeholder 21" },
   ];
 
   const gallery: GalleryImage[] = images.length ? images : defaultImages;
@@ -48,19 +56,19 @@ export default function Others({ images = [] }: { images?: GalleryImage[] }) {
   }, [gallery.length]);
 
   return (
-    <div className="max-w-[920px] mx-auto">
+    <div className="max-w-[920px] mx-auto -z-50">
       <ScrollFadeIn>
         <div className="text-[28px]">Another side of my life</div>
         <p className="text-[#969191]">
           A closer look at the moments and experiences that define my journey
         </p>
         <hr className="border-b-1 border-dashed border-gray-300 mt-3 mb-6" />
-        <div className="columns-2 md:columns-3 lg:columns-4 gap-3 space-y-3">
+        <div className="columns-2 md:columns-3 lg:columns-4 gap-3 space-y-3 px-1">
           {gallery.map((img, idx) => (
             <div
               key={idx}
-              className={`overflow-hidden rounded-2xl break-inside-avoid shadow-sm ${
-                idx === 0 ? "col-span-full" : ""
+              className={`overflow-hidden rounded-2xl break-inside-avoid shadow-sm  ${
+                idx === 0 ? "col-span-full" : "" 
               }`}
             >
               <Image

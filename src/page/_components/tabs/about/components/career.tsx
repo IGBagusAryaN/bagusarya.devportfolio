@@ -50,6 +50,28 @@ export const Career = () => {
             </p>
           </div>
         </div>
+        <div
+          className={`p-2 flex items-center border rounded-2xl mt-3 ${
+            theme === "dark"
+              ? "border-[#404040] bg-[#262626]"
+              : "border-gray-300"
+          }`}
+        >
+          <div className="w-[70px] overflow-hidden px-3 ml-1.5">
+            <img
+              src={"/assets/png/simetri.png"}
+              alt="simetri"
+              className="object-cover"
+            />
+          </div>
+          <div>
+            <p>PT.Sinar Metrindo Perkasa</p>
+            <p className="text-[14px] text-[#969191]">IT Staff • Software Developer</p>
+            <p className="text-[14px] text-[#969191]">
+              Now • Full-time • Onsite
+            </p>
+          </div>
+        </div>
       </div>
     </ScrollFadeIn>
   );
