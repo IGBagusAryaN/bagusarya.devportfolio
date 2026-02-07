@@ -12,9 +12,10 @@ type CardProps = {
   desc: string;
   url: string;
   techs: string[];
+  active: boolean;
 };
 
-export const Card = ({ img, title, desc, url, techs }: CardProps) => {
+export const Card = ({ img, title, desc, url, techs, active }: CardProps) => {
   const [hovered, setHovered] = useState(false);
   const { theme } = useThemeStore();
 
@@ -44,7 +45,15 @@ export const Card = ({ img, title, desc, url, techs }: CardProps) => {
           >
             <div className="flex justify-between items-center">
               <h3 className="text-xl md:text-2xl font-semibold">{title}</h3>
-              <LiveDemo url={url} />
+              <div className="flex items-center">
+                <LiveDemo url={url} active={active} />
+
+                {!active && (
+                  <span className="text-white px-2 bg-red-500 rounded-3xl">
+                    Inactive
+                  </span>
+                )}
+              </div>
             </div>
             <p className="text-sm my-3">{desc}</p>
             <div className="flex items-end h-full">

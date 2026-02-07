@@ -5,6 +5,7 @@ export const portfolioData = [
     title: "Circle App",
     desc: "Circle App is a modern social platform with a sleek dark UI for interactive connections. It offers smooth interactions and personalized suggestions.",
     url: "https://circle-app-socialmedia.vercel.app",
+        active: true,
     techs: [
       "/assets/svg/React.svg",
       "/assets/png/chakra.png",
@@ -20,6 +21,7 @@ export const portfolioData = [
     title: "Meetio",
     desc: "Book your appointments in seconds. Fast, easy, and reliable.",
     url: "https://meetio-yi7k.vercel.app/",
+        active: true,
     techs: [
       "/assets/svg/next-light.svg",
       "/assets/png/shadcn-light.png",
@@ -35,6 +37,7 @@ export const portfolioData = [
     title: "TravelHunt",
     desc: "TravelHunt is a web app that helps users easily choose the best travel destination in Indonesia through informative visuals and descriptions.",
     url: "https://travel-hunt-alpha.vercel.app/",
+        active: true,
     techs: [
       "/assets/svg/React.svg",
       "/assets/svg/express-light.svg",
@@ -49,6 +52,7 @@ export const portfolioData = [
     title: "WriteOn",
     desc: "Write On is a simple web app for creating and managing short stories. Built with Laravel and Breeze, it offers a clean UI and essential CRUD features in a lightweight project.",
     url: "https://write-onn.vercel.app/",
+        active: false,
     techs: ["/assets/png/Laravel.png", "/assets/png/tailwind.png", "/assets/png/mysql.png"],
   },
   {
@@ -57,6 +61,7 @@ export const portfolioData = [
     title: "Lakoe",
     desc: "Lakoe App is a modern e-commerce platform with a minimalist UI for easy and secure shopping. It features personalized recommendations and a smooth checkout.",
     url: "https://www.lakoe.site/",
+        active: false,
     techs: [
       "/assets/svg/React.svg",
       "/assets/png/chakra.png",
@@ -72,6 +77,7 @@ export const portfolioData = [
     title: "GoodBudget",
     desc: "Easily log your daily expenses and income with just a few clicks. Get clear insights into your spending and manage your money better",
     url: "https://expo.dev/accounts/aryaaarz/projects/mobile/builds/505995d7-e29f-4c1d-aa87-aea539135490",
+        active: true,
     techs: [
       "/assets/png/react-native.png",
       "/assets/svg/express-light.svg",
