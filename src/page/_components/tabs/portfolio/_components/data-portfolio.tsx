@@ -5,7 +5,7 @@ export const portfolioData = [
     title: "Circle App",
     desc: "Circle App is a modern social platform with a sleek dark UI for interactive connections. It offers smooth interactions and personalized suggestions.",
     url: "https://circle-app-socialmedia.vercel.app",
-        active: true,
+        active: false,
     techs: [
       "/assets/svg/React.svg",
       "/assets/png/chakra.png",
@@ -21,7 +21,7 @@ export const portfolioData = [
     title: "Meetio",
     desc: "Book your appointments in seconds. Fast, easy, and reliable.",
     url: "https://meetio-yi7k.vercel.app/",
-        active: true,
+        active: false,
     techs: [
       "/assets/svg/next-light.svg",
       "/assets/png/shadcn-light.png",
@@ -37,7 +37,7 @@ export const portfolioData = [
     title: "TravelHunt",
     desc: "TravelHunt is a web app that helps users easily choose the best travel destination in Indonesia through informative visuals and descriptions.",
     url: "https://travel-hunt-alpha.vercel.app/",
-        active: true,
+        active: false,
     techs: [
       "/assets/svg/React.svg",
       "/assets/svg/express-light.svg",

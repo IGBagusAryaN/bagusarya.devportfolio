@@ -3,6 +3,25 @@ import { useThemeStore } from "@/hooks/store/theme-store";
 import { Intro } from "./_components/intro";
 import { Tools } from "./_components/tools";
 import { WhatUp } from "./_components/connect";
+import FlowingMenu from "./_components/flow-menu";
+
+const demoItems = [
+  {
+    link: "#",
+    text: "Frontend Developer",
+    image: "https://cdn.wallpapersafari.com/98/70/F38zRk.jpg",
+  },
+  {
+    link: "#",
+    text: "Backend Developer",
+    image: "https://wallpapercave.com/wp/wp14258974.png",
+  },
+  {
+    link: "#",
+    text: "Database Administrator",
+    image: "https://wallpapers-clan.com/wp-content/uploads/2025/01/naruto-uzumaki-sunny-day-desktop-wallpaper-cover.jpg",
+  },
+];
 
 const stack = [
   { image: "assets/png/reactjs.png", name: "ReactJs" },
@@ -43,6 +62,20 @@ export const Summary = () => {
       </ScrollFadeIn>
 
       <hr className="border-b-1 border-dashed border-gray-300 my-10" />
+
+      {/* <div style={{ height: "600px", position: "relative" }}>
+        <FlowingMenu
+          items={demoItems}
+          speed={15}
+          textColor="#060010"
+          bgColor="#ffffff"
+          marqueeBgColor="#060010"
+          marqueeTextColor="#ffffff"
+          borderColor="#060010"
+        />
+      </div> */}
+
+      {/* <hr className="border-b-1 border-dashed border-gray-300 my-10" /> */}
 
       <ScrollFadeIn delay={0.3}>
         <Tools rows={rows} isDarkMode={isDarkMode} />
